@@ -27,6 +27,11 @@ button#copy {
     height: 100vh;
 }
 
+  
+  button#copy:hover {
+    background: #f00;
+  }
+  
 /* custom focus effect (outline would be cropped) */
 button#copy:active,
 button#copy:focus {
@@ -59,6 +64,12 @@ copy.onclick = function() {
   document.execCommand('copy');
   _i.hidden = true;
   _i.value = '';
+  this.innerText = 'Cкопировано';
+
+  setTimeout(function() {
+   copy.innerText = 'Копировать промокод';
+  }, 4000);
 };
+  
 </script>
 </body>
