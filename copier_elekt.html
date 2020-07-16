@@ -16,27 +16,22 @@ button#copy {
     background: #ffd167;
     box-shadow: 0 0 2px #ffd167, inset 0 -4px 1px #84610f;
     color: #000;
-    cursor: pointer;
     border: none;
     padding: 5px 5px 7px 5px;
     width: 250px;
     font-size: 18px;
     border-radius: 3px;
     font-weight: bold;
-}
-
-/* cursor/size for within iframe */
-button#copy {
-  cursor: copy;
-  width: 100vw;
-  height: 100vh;
+    cursor: copy;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* custom focus effect (outline would be cropped) */
 button#copy:active,
 button#copy:focus {
   outline:0;
-  border-color:#0f0;
+  border: 2px solid #0f0;
 }
 </style>
 
