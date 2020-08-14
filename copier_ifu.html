@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>
+/* so button can go to edge */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* Стили для кнопки копирования */
+#cupon-btn {
+    height: 68px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    box-shadow: 10px 0px 20px #2b2b2b;
+    border-radius: 0 5px 5px 0;
+    background: url(/ua/static/img/main-menu-bg.png) no-repeat;
+    box-shadow: 0 0 34px 11px rgba(145, 48, 14, 0), inset 0 0 17px 7px rgba(145, 48, 14, 0);
+    background-size: 250%;
+    background-position: -37px -27px;
+    box-shadow: 0px 0px 5px #000;
+}
+
+button#copy {
+    background: url(/ua/static/img/copy.png) no-repeat;
+    width: 54px;
+    height: 67px;
+}
+
+/* custom focus effect (outline would be cropped) */
+button#copy:active,
+button#copy:focus {
+  outline:0;
+  border-color:#0afaca;
+}
+</style>
+
+</head>
+<body>
+
+<button readonly="" id="copy" ></button>
+<input readonly="" type="text" id="_i" hidden />
+
+<script>
+/*
+  When the copy button is pressed, we:
+  * decode the text from the hash, as that's how the text is passed to us
+  * place it in our hidden text element,
+  * show and focus the input, so the browser lets us copy it
+  * call `execCommand('copy')`, to perform the actual copy
+  * before hiding it again.
+  See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+ */
+copy.onclick = function() {
+  _i.value = window.decodeURIComponent(window.location.hash.substr(1));
+  _i.hidden = false;
+  _i.select();
+  _i.focus();
+  document.execCommand('copy');
+  _i.hidden = true;
+  _i.value = '';
+};
+</script>
+</body>
