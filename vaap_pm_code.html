@@ -50,14 +50,14 @@ html,body {
 							<img width="170" height="26" src="http://vaap.org.ua/img/logo.svg" alt="Vavada">
 						</div>
 					</div>
-					<div class="h_h_l_t">Промокод:</div>
+					<div class="h_h_l_t">Ваш Бонус:</div>
 					<div class="h_h_l_s">100% + 100 FS</div>
 					<div class="gift-icon-v2" style="background-color: #f00"><br></div>
 				</div>
 				<div class="h_h_r">
 					<div class="h_h_r_bb">
-						<div class="h_h_r_t">Ваш Бонус:</div>
-						<div class="h_h_r_p click_block ">
+						<div class="h_h_r_t">Скопировать промокод:</div>
+						<div class="h_h_r_p click_block">
 							<div id="xbet_promo" class="r_p_t">VAVADABONUS</div>
 							<div class="r_p_i"><br></div>
 						</div>
@@ -98,7 +98,7 @@ html,body {
 
 	  /*cupon_button.onclick = */ xbet_button.onclick = function () {
 		selectText(this.dataset.targetCopyId);
-		this.innerText = 'Промокод скопировано';
+		this.innerText = 'Промокод скопирован';
 
 		setTimeout(() => document.execCommand("copy"));
 		setTimeout(() => document.execCommand("copy"), 100);
