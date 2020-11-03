@@ -43,65 +43,16 @@
 										</div>
 									</div>
 
-									<!-- ! БЛОК ПРОКОДА 2 -->
-									<div class="promo_single_head tab_item">
-										<div class="p_s_h_h">
-											<div class="h_h_l">
-												<div class="h_h_l_l">
-													<div class="td-bc-logo skip_lazy">
-														<img src="http://talnoe.kiev.ua/img/logo-alt2.png" alt="Melbet">
-													</div>
-												</div>
-												<div class="h_h_l_t">Бонус:</div>
-												<div class="h_h_l_s">4000 руб</div>
-												<div class="gift-icon-v2" style="background-color:  #1E90FF"><br></div>
-											</div>
-											<div class="h_h_r">
-												<div class="h_h_r_bb">
-													<div class="h_h_r_t">Скопировать промокод:</div>
-													<div class="h_h_r_p click_block ">
-														<div id="xbet_promo" class="r_p_t">MONEY4BET</div>
-														<div class="r_p_i"><br></div>
-													</div>
-													<a id="xbet_button" data-target-copy-id="xbet_promo" class="h_h_r_b like-green-link"> ПОЛУЧИТЬ БОНУС </a>
-												</div>
-											</div>
-										</div>
-									</div>
+									
 			</div>
 
-			<div class="tabs">
-				<!-- ! КНОПКА ПЕРЕКЛЮЧЕНИЯ ПРОМО -->
-				<div class="promo_single_body">
-					<div class="p_s_b_duo_bk">
-						
-						<div class="psb_d_b_1xs tab">
-							<div class="xst_on">
-													<div class="td-bc-logo skip_lazy" style="height: 18px;background: url('http://talnoe.kiev.ua/img/logo-alt.png');margin: auto 10px;"></div>
-												</div>
-						</div>
-						<div class="psb_d_b_1xs tab">
-							<div class="xst_on">
-													<div class="td-bc-logo skip_lazy" style="height: 18px;background: url('http://talnoe.kiev.ua/img/logo-alt.png');margin: auto 10px;"></div>
-												</div>
-						</div>
-					</div>
-					<div class="p_s_b_text">
-						<div class="p_s_b_text_t"> Букмекерская контора 1xBet на территории Украины работает по офшорной лицензии Кюрасао.</div>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 
 		<!-- ! include files -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-		<script>
-			$(".wrapper .tab").click(function () {
-				$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-				$(".tab_item").hide().eq($(this).index()).fadeIn()
-			}).eq(0).addClass("active");
-		</script>
+		
 		<script>
 			function selectText(id) {
 				var sel, range;
@@ -126,7 +77,7 @@
 				}
 			}
 
-			cupon_button.onclick = xbet_button.onclick = function () {
+			cupon_button.onclick = function () {
 				selectText(this.dataset.targetCopyId);
 				this.innerText = 'Промокод скопировано';
 
