@@ -41,12 +41,6 @@
 				--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 			}
 
-			*,
-			::after,
-			::before {
-				box-sizing: border-box;
-			}
-
 			html {
 				font-family: sans-serif;
 				line-height: 1.15;
@@ -74,7 +68,7 @@
 				pointer-events: none !important;
 			}
 
-			h1 {
+			.h1 {
 				margin-top: 0;
 				margin-bottom: 0.5rem;
 			}
@@ -101,38 +95,7 @@
 			}
 
 			button {
-				border-radius: 0;
-			}
-
-			button:focus {
-				outline: 1px dotted;
-				outline: 5px auto -webkit-focus-ring-color;
-			}
-
-			button {
-				margin: 0;
-				font-family: inherit;
-				font-size: inherit;
-				line-height: inherit;
-			}
-
-			button {
 				overflow: visible;
-			}
-
-			button {
-				text-transform: none;
-			}
-
-			button {
-				-webkit-appearance: button;
-			}
-
-			[type="button"]:not(:disabled),
-			[type="reset"]:not(:disabled),
-			[type="submit"]:not(:disabled),
-			button:not(:disabled) {
-				cursor: pointer;
 			}
 
 			button::-moz-focus-inner {
@@ -145,13 +108,13 @@
 				-webkit-appearance: button;
 			}
 
-			h1 {
+			.h1 {
 				margin-bottom: 0.5rem;
 				font-weight: 500;
 				line-height: 1.2;
 			}
 
-			h1 {
+			.h1 {
 				font-size: 2.5rem;
 			}
 
@@ -160,22 +123,24 @@
 				font-weight: 300;
 			}
 
-			.h-100 {
-				height: 100% !important;
+			.my-1 {
+				margin-top: 0.25rem !important;
 			}
 
-			.mx-0 {
-				margin-right: 0 !important;
+			.my-1 {
+				margin-bottom: 0.25rem !important;
 			}
 
-			.mx-0 {
-				margin-left: 0 !important;
-			}
-
-			.mt-2 {
+			.mt-2,
+			.my-2 {
 				margin-top: 0.5rem !important;
 			}
 
+			.my-2 {
+				margin-bottom: 0.5rem !important;
+			}
+
+			.mt-3,
 			.my-3 {
 				margin-top: 1rem !important;
 			}
@@ -183,10 +148,6 @@
 			.mb-3,
 			.my-3 {
 				margin-bottom: 1rem !important;
-			}
-
-			.mt-4 {
-				margin-top: 1.5rem !important;
 			}
 
 			.px-0 {
@@ -201,8 +162,16 @@
 				padding-top: 0.25rem !important;
 			}
 
+			.px-1 {
+				padding-right: 0.25rem !important;
+			}
+
 			.py-1 {
 				padding-bottom: 0.25rem !important;
+			}
+
+			.px-1 {
+				padding-left: 0.25rem !important;
 			}
 
 			.pt-2 {
@@ -215,6 +184,10 @@
 
 			.px-2 {
 				padding-left: 0.5rem !important;
+			}
+
+			.pt-3 {
+				padding-top: 1rem !important;
 			}
 
 			.px-3 {
@@ -280,7 +253,6 @@
 			}
 
 			@media (min-width: 576px) {
-
 				.col-sm-6 {
 					-ms-flex: 0 0 50%;
 					flex: 0 0 50%;
@@ -332,34 +304,32 @@
 				justify-content: center !important;
 			}
 
+			.align-items-center {
+				-ms-flex-align: center !important;
+				align-items: center !important;
+			}
+
 			@supports ((position: -webkit-sticky) or (position: sticky)) {}
 
-			.h-100 {
-				height: 100% !important;
+			.my-1 {
+				margin-top: 0.25rem !important;
 			}
 
-			.mx-0 {
-				margin-right: 0 !important;
-			}
-
-			.mx-0 {
-				margin-left: 0 !important;
+			.my-1 {
+				margin-bottom: 0.25rem !important;
 			}
 
 			.mt-2 {
 				margin-top: 0.5rem !important;
 			}
 
+			.mt-3,
 			.my-3 {
 				margin-top: 1rem !important;
 			}
 
 			.my-3 {
 				margin-bottom: 1rem !important;
-			}
-
-			.mt-4 {
-				margin-top: 1.5rem !important;
 			}
 
 			.px-0 {
@@ -374,8 +344,16 @@
 				padding-top: 0.25rem !important;
 			}
 
+			.px-1 {
+				padding-right: 0.25rem !important;
+			}
+
 			.py-1 {
 				padding-bottom: 0.25rem !important;
+			}
+
+			.px-1 {
+				padding-left: 0.25rem !important;
 			}
 
 			.pt-2 {
@@ -388,6 +366,10 @@
 
 			.px-2 {
 				padding-left: 0.5rem !important;
+			}
+
+			.pt-3 {
+				padding-top: 1rem !important;
 			}
 
 			.px-3 {
@@ -447,35 +429,22 @@
 
 			/**/
 
-			/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
-
 			body,
-			h1,
+			.h1,
 			html,
 			p {
 				margin: 0;
 				padding: 0;
 			}
 
-			h1 {
+			.h1 {
 				font-size: 100%;
 				font-weight: 400;
-			}
-
-			button {
-				margin: 0;
 			}
 
 			html {
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
-			}
-
-			*,
-			:after,
-			:before {
-				-webkit-box-sizing: inherit;
-				box-sizing: inherit;
 			}
 
 			img {
@@ -503,13 +472,6 @@
 				font-family: Lato, sans-serif;
 			}
 
-			body {
-				color: #000;
-				font-size: 1em;
-				font-weight: 400;
-				line-height: 1.44;
-			}
-
 			a {
 				cursor: pointer;
 				color: #47b;
@@ -535,18 +497,18 @@
 				box-shadow: 0 0 0 0.125em rgba(68, 119, 187, 0.25);
 			}
 
-			h1 {
+			.h1 {
 				margin-bottom: 0.5rem;
 				line-height: 1.32;
 			}
 
-			h1 {
+			.h1 {
 				font-size: 1.25rem;
 			}
 
 			@media print,
 			screen and (min-width: 769px) {
-				h1 {
+				.h1 {
 					font-size: 1.875rem;
 				}
 			}
@@ -579,11 +541,9 @@
 				opacity: 0.8;
 			}
 
-			@supports ((-webkit-clip-path: polygon(0 0, 0% 100%, 100% 0)) or (clip-path: polygon(0 0, 0% 100%, 100% 0))) {
-			}
+			@supports ((-webkit-clip-path: polygon(0 0, 0% 100%, 100% 0)) or (clip-path: polygon(0 0, 0% 100%, 100% 0))) {}
 
-			@-moz-document url-prefix() {
-			}
+			@-moz-document url-prefix() {}
 
 			.rating_roulette {
 				margin-top: 10px;
@@ -647,22 +607,13 @@
 
 			@font-face {
 				font-family: Conv_wiguru;
-				src: url(/assets/fonts/wiguru.eot);
-				src: local("WiGuru"), url(/assets/fonts/wiguru.woff) format("woff"),
-					url(/assets/fonts/wiguru.ttf) format("truetype"), url(/assets/fonts/wiguru.svg) format("svg");
+				src: url(http://www.heifer.org.ua/assets/fonts/wiguru.eot);
+				src: local("WiGuru"), url(http://www.heifer.org.ua/assets/fonts/wiguru.woff) format("woff"),
+					url(http://www.heifer.org.ua/assets/fonts/wiguru.ttf) format("truetype"), url(http://www.heifer.org.ua/assets/fonts/wiguru.svg) format("svg");
 				font-weight: 400;
 				font-display: swap;
 				font-style: normal;
 			}
-
-			/* @font-face {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 400;
-    font-display: auto;
-    src: url(/assets/fonts/fa-regular-400.eot);
-    src: url(/assets/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/fa-regular-400.woff2) format("woff2"), url(/assets/fonts/fa-regular-400.woff) format("woff"), url(/assets/fonts/fa-regular-400.ttf) format("truetype"), url(/assets/fonts/fa-regular-400.svg#fontawesome) format("svg");
-} */
 
 			.bnt_block .visit {
 				width: 90%;
@@ -678,9 +629,9 @@
 				border-radius: 4px;
 			}
 
-			h1 {
+			.h1 {
 				color: #000;
-				font-size: 24px !important;
+				font-size: 24px;
 				line-height: 1.4;
 				font-weight: 700 !important;
 				padding: 0 0 7px 0;
@@ -741,14 +692,6 @@
 			/* *** for SEO text *** /end */
 
 			/* TOC */
-
-			/* / ez-toc-list */
-
-			/* breadcrumbs */
-
-			/* / breadcrumbs */
-
-
 
 			.btn-group,
 			.btn-group-vertical {
@@ -813,10 +756,6 @@
 				justify-content: center;
 			}
 
-			.btn-group-vertical>.btn {
-				width: 100%;
-			}
-
 			.btn-group-vertical>.btn:not(:first-child) {
 				margin-top: -1px;
 			}
@@ -853,7 +792,6 @@
 
 			.btn-group-sm>.btn {
 				padding: 0.25rem 0.5rem;
-				font-size: 16px;
 				line-height: 1.5;
 				border-radius: 0.2rem;
 			}
@@ -893,6 +831,7 @@
 				font-weight: bolder !important;
 			}
 
+			.mt-3,
 			.my-3 {
 				margin-top: 1rem !important;
 			}
@@ -900,13 +839,6 @@
 			.d-flex {
 				display: -ms-flexbox !important;
 				display: flex !important;
-			}
-
-			@media (min-width: 576px) and (max-width: 767px) {
-
-				.card-body-action {
-					transform: scale(0.85);
-				}
 			}
 
 			@media (max-width: 767px) {
@@ -922,49 +854,6 @@
 			*::before,
 			*::after {
 				box-sizing: border-box;
-			}
-
-			/* ! на 4 промо */
-			#md-offers {
-				position: absolute;
-				bottom: -12px;
-				left: -7.1px;
-				transform: scale(1, 0.85);
-			}
-
-			/* ! на 5 промо */
-			/* #md-offers {
-    position: absolute;
-    bottom: -18px;
-    left: -7.1px;
-    transform: scale(1, 0.75);
-} */
-			#sm-offers {
-				display: none !important;
-			}
-
-			@media (max-width: 767px) {
-				#md-offers {
-					display: none !important;
-				}
-
-				#sm-offers {
-					display: inline-flex !important;
-					transform: scale(0.95);
-				}
-			}
-
-			@media (max-width: 392px) {
-
-				.btn-group-sm>.btn {
-					font-size: 12px;
-				}
-			}
-
-			@media (max-width: 390px) {
-				.lead {
-					font-size: 0.9rem !important;
-				}
 			}
 
 			/* PROMOCODE COPY */
@@ -1018,7 +907,6 @@
 				order: 2;
 			}
 
-
 			.pm-code-blk .copy-btn-bonus .copy-icon {
 				display: inline-block;
 				width: 25px;
@@ -1032,328 +920,479 @@
 				background: url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="svg-icon-copy"><path d="M20 1.25H5a2.507 2.507 0 00-2.5 2.5v17.5H5V3.75h15v-2.5z"></path><path d="M10 8.75v17.5h13.75V8.75H10zm0-2.5h13.75a2.5 2.5 0 012.5 2.5v17.5a2.5 2.5 0 01-2.5 2.5H10a2.5 2.5 0 01-2.5-2.5V8.75a2.5 2.5 0 012.5-2.5z"></path></svg>') no-repeat;
 			}
 
-			/* END PROMOCODE COPY */
+			/* ? DESCTOP */
+			#dynamic {
+				min-height: 235px;
+				width: 100%;
+			}
+
+			#md-offers {
+				position: absolute;
+				bottom: -3px;
+				left: -7.1px;
+				transform: scale(1, 0.95);
+			}
+
+			#sm-offers {
+				display: none;
+			}
+
+			#xs-offers {
+				display: none;
+			}
+
+			#one,
+			#two,
+			#three {
+				min-height: 235px;
+				max-height: 235px;
+			}
+
+			.akcent {
+				font-size: 26px;
+				color: #fb0;
+				text-shadow: 0px 0px 1px #ba8902;
+				line-height: 26px;
+			}
+
+			@media (min-width: 992px) {
+				.navbar-brand {
+					height: 60px;
+				}
+
+				.navbar-brand img {
+					max-width: 220px;
+				}
+			}
+
+			/* ? SMALL DESCTOP */
+			@media (max-width: 991px) {
+
+				#one,
+				#two,
+				#three,
+				#dynamic {
+					min-height: 243px;
+				}
+
+				.navbar-brand {
+					height: 70px;
+					padding-top: 5px;
+				}
+			}
+
+			/* ? XL GADGET */
+			@media (max-width: 767px) {
+				h1 {
+					position: absolute;
+					top: 8px;
+					left: 25%;
+				}
+
+				#dynamic {
+					max-height: 435px;
+					height: 100%;
+				}
+
+				#md-offers {
+					display: none;
+				}
+
+				#one {
+					min-height: 100px;
+					height: 100%;
+				}
+
+				.navbar-brand {
+					height: 80px;
+				}
+
+				#two {
+					min-height: 280px;
+					height: 100%;
+				}
+
+
+			}
+
+			@media (min-width: 576px) and (max-width: 767px) {
+				#sm-offers {
+					display: inline-flex;
+					transform: scale(0.96);
+				}
+
+				.card-body-action {
+					transform: scale(0.9);
+					position: absolute;
+					bottom: 45px;
+					left: 25px;
+				}
+
+				p.h1 {
+					width: max-content;
+					margin-left: 39%;
+					padding-bottom: 10px;
+				}
+
+				#three {
+					max-height: 280px;
+					padding-top: 42px;
+				}
+
+			}
+
+			@media (max-width: 576px) {
+				h1 {
+					position: absolute;
+					top: 10px;
+					left: 11px;
+					font-size: 20px;
+				}
+
+				#dynamic {
+					height: 100%;
+					min-height: 705px;
+					max-height: 720px;
+				}
+
+				#xs-offers {
+					display: inline-flex;
+					position: absolute;
+					bottom: 8px;
+					left: 3.3%;
+					width: 90%;
+				}
+
+				#one {
+					min-height: 90px;
+					height: 100%;
+				}
+
+				.navbar-brand {
+					height: 60px;
+				}
+
+				#two {
+					min-height: 205px;
+					max-height: 205px;
+					height: 100%;
+				}
+
+				p.h1 {
+					width: max-content;
+					margin: 0 auto;
+					font-size: 20px;
+				}
+
+				#three {
+					max-height: 240px;
+				}
+
+				.card-body-action {
+					transform: scale(0.9);
+					margin-top: 0px;
+				}
+			}
+
 		</style>
 
 
 	</head>
 
 	<body style="background-color: #fff;">
+		<!-- ? iframe -->
+		<div class="container-fluid" id="dynamic">
 
-		
-					<!-- ? iframe -->
-					<div class="container-fluid ">
+			<!--! СТРОКА ДЛЯ ОФЕРОВ -->
 
-						<!--! СТРОКА ДЛЯ ОФЕРОВ -->
-
-						<div class="tab_content">
-							<!-- ? Slotor -->
-							<div class="row tab_item">
-								<!-- * 1 -->
-								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
-									<a href="#" class="navbar-brand disabled my-3 mx-0 text-center ">
-										<img src="http://www.heifer.org.ua/assets/img/slotor-logo.png" alt="Онлайн Казино Slotor" loading="lazy">
-									</a>
-								</div>
-								<!-- * 2 -->
-								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
-									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Slotor</h1>
-
-									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
-
-									<!-- ! БЛОК ПРОМОКОДА 1 -->
-									<div class="card-body-action mx-auto">
-										<span class="small text-uppercase">SLOTOR promocode</span>
-										<div class="pm-code-blk">
-											<button id="copy_btn_1" data-target-copy-id="promocode_1" class="copy-btn-bonus" title="Скопировать код">
-												<span class="copy-icon"></span>
-											</button>
-											<div id="promocode_1" class="code">Казино Slotor</div>
-										</div>
-									</div>
-								</div>
-								<!-- * 3 -->
-								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
-									<div class="row mt-2">
-										<div class="col-md-12 col-sm-12 text-center">
-											<div class="rating_casino red-text">95</div>
-										</div>
-										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
-											<a rel="nofollow" href="https://shmeker.net/rmzjvX?source=www.heifer.org.ua" class="visit">Перейти</a>
-											<div class="rating_roulette">
-												<span class="public_asessment">Оценка</span>
-												<div class="rating rating_active">
-													<div id="rating" class="rating__best">
-														<div class="rating__current" style="display: block; width: 106.6px;"></div>
-														<div class="rating__star rating__star_5" data-title="5"></div>
-														<div class="rating__star rating__star_4" data-title="4"></div>
-														<div class="rating__star rating__star_3" data-title="3"></div>
-														<div class="rating__star rating__star_2" data-title="2"></div>
-														<div class="rating__star rating__star_1" data-title="1"></div>
-													</div>
-												</div>
-												<div class="rating_text"> Рейтинг игроков:
-													<span class="rating-value">4.42</span>
-													/5 - <span class="rating-count">9</span> голосов
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- ? Slotor -->
-
-							<!-- ? Joker -->
-							<!-- ! для подключения добавить класс tab_item и раскоментировать кнопки -->
-							<div class="row " style="display: none;">
-								<!-- * 1 -->
-								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
-									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
-										<img src="http://www.heifer.org.ua/assets/img/logo-joker.png" alt="Онлайн Казино Joker" loading="lazy">
-									</a>
-								</div>
-								<!-- * 2 -->
-								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
-									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Joker</h1>
-
-									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
-
-									<!-- ! БЛОК ПРОМОКОДА 1 -->
-									<div class="card-body-action mx-auto">
-										<span class="small text-uppercase">Joker promocode</span>
-										<div class="pm-code-blk">
-											<button id="copy_btn_2" data-target-copy-id="promocode_2" class="copy-btn-bonus" title="Скопировать код">
-												<span class="copy-icon"></span>
-											</button>
-											<div id="promocode_2" class="code">Казино Joker</div>
-										</div>
-									</div>
-
-								</div>
-								<!-- * 3 -->
-								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
-									<div class="row mt-2">
-										<div class="col-md-12 col-sm-12 text-center">
-											<div class="rating_casino red-text">95</div>
-										</div>
-										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
-											<a rel="nofollow" href="#" class="visit">Перейти</a>
-											<div class="rating_roulette">
-												<span class="public_asessment">Оценка</span>
-												<div class="rating rating_active">
-													<div id="rating" class="rating__best">
-														<div class="rating__current" style="display: block; width: 106.6px;"></div>
-														<div class="rating__star rating__star_5" data-title="5"></div>
-														<div class="rating__star rating__star_4" data-title="4"></div>
-														<div class="rating__star rating__star_3" data-title="3"></div>
-														<div class="rating__star rating__star_2" data-title="2"></div>
-														<div class="rating__star rating__star_1" data-title="1"></div>
-													</div>
-												</div>
-												<div class="rating_text"> Рейтинг игроков:
-													<span class="rating-value">4.9</span>
-													/5 - <span class="rating-count">25</span> голосов
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- ? Joker -->
-
-							<!-- ? Pin-up -->
-							<div class="row tab_item" style="display: none;">
-								<!-- * 1 -->
-								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
-									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
-										<img src="http://www.heifer.org.ua/assets/img/logo-pin-up.png" alt="Онлайн Казино Pin-up" loading="lazy">
-									</a>
-								</div>
-								<!-- * 2 -->
-								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
-									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Pin-up</h1>
-
-									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
-
-									<!-- ! БЛОК ПРОМОКОДА 3 -->
-									<div class="card-body-action mx-auto">
-										<span class="small text-uppercase">Pin-up promocode</span>
-										<div class="pm-code-blk">
-											<button id="copy_btn_3" data-target-copy-id="promocode_3" class="copy-btn-bonus" title="Скопировать код">
-												<span class="copy-icon"></span>
-											</button>
-											<div id="promocode_3" class="code">LOTOPLAY</div>
-										</div>
-									</div>
-								</div>
-								<!-- * 3 -->
-								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
-									<div class="row mt-2">
-										<div class="col-md-12 col-sm-12 text-center">
-											<div class="rating_casino red-text">97</div>
-										</div>
-										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
-											<a rel="nofollow" href="https://shmeker.net/yZvKWH?source=www.heifer.org.ua" class="visit">Перейти</a>
-											<div class="rating_roulette">
-												<span class="public_asessment">Оценка</span>
-												<div class="rating rating_active">
-													<div id="rating" class="rating__best">
-														<div class="rating__current" style="display: block; width: 106.6px;"></div>
-														<div class="rating__star rating__star_5" data-title="5"></div>
-														<div class="rating__star rating__star_4" data-title="4"></div>
-														<div class="rating__star rating__star_3" data-title="3"></div>
-														<div class="rating__star rating__star_2" data-title="2"></div>
-														<div class="rating__star rating__star_1" data-title="1"></div>
-													</div>
-												</div>
-												<div class="rating_text"> Рейтинг игроков:
-													<span class="rating-value">4.56</span>
-													/5 - <span class="rating-count">15</span> голосов
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- ? Pin-up -->
-
-							<!-- ? Joycasino -->
-							<div class="row tab_item" style="display: none;">
-								<!-- * 1 -->
-								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
-									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
-										<img src="http://www.heifer.org.ua/assets/img/logo-Joycasino.png" alt="Онлайн Казино Joycasino" loading="lazy">
-									</a>
-								</div>
-								<!-- * 2 -->
-								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
-									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Joycasino</h1>
-
-									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
-
-									<!-- ! БЛОК ПРОМОКОДА 4 -->
-									<div class="card-body-action mx-auto">
-										<span class="small text-uppercase">Joycasino promocode</span>
-										<div class="pm-code-blk">
-											<button id="copy_btn_4" data-target-copy-id="promocode_4" class="copy-btn-bonus" title="Скопировать код">
-												<span class="copy-icon"></span>
-											</button>
-											<div id="promocode_4" class="code">JOYBONUSUA</div>
-										</div>
-									</div>
-								</div>
-								<!-- * 3 -->
-								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
-									<div class="row mt-2">
-										<div class="col-md-12 col-sm-12 text-center">
-											<div class="rating_casino red-text">94</div>
-										</div>
-										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
-											<a rel="nofollow" href="https://shmeker.net/LKhfVm?source=www.heifer.org.ua" class="visit">Перейти</a>
-											<div class="rating_roulette">
-												<span class="public_asessment">Оценка</span>
-												<div class="rating rating_active">
-													<div id="rating" class="rating__best">
-														<div class="rating__current" style="display: block; width: 106.6px;"></div>
-														<div class="rating__star rating__star_5" data-title="5"></div>
-														<div class="rating__star rating__star_4" data-title="4"></div>
-														<div class="rating__star rating__star_3" data-title="3"></div>
-														<div class="rating__star rating__star_2" data-title="2"></div>
-														<div class="rating__star rating__star_1" data-title="1"></div>
-													</div>
-												</div>
-												<div class="rating_text"> Рейтинг игроков:
-													<span class="rating-value">4.8</span>
-													/5 - <span class="rating-count">13</span> голосов
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- ? Joycasino -->
-
-							<!-- ? Vavada -->
-							<div class="row tab_item" style="display: none;">
-								<!-- * 1 -->
-								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
-									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
-										<img src="http://www.heifer.org.ua/assets/img/logo-vavada.svg" height="46" width="300" alt="Онлайн Казино Vavada" loading="lazy">
-									</a>
-								</div>
-								<!-- * 2 -->
-								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
-									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Vavada</h1>
-
-									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
-
-									<!-- ! БЛОК ПРОМОКОДА 5 -->
-									<div class="card-body-action mx-auto">
-										<span class="small text-uppercase">Vavada promocode</span>
-										<div class="pm-code-blk">
-											<button id="copy_btn_5" data-target-copy-id="promocode_5" class="copy-btn-bonus" title="Скопировать код">
-												<span class="copy-icon"></span>
-											</button>
-											<div id="promocode_5" class="code">VAVADABONUS</div>
-										</div>
-									</div>
-								</div>
-								<!-- * 3 -->
-								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
-									<div class="row mt-2">
-										<div class="col-md-12 col-sm-12 text-center">
-											<div class="rating_casino red-text">96</div>
-										</div>
-										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
-											<a rel="nofollow" href="https://shmeker.net/SX7MfH?source=www.heifer.org.ua" class="visit">Перейти</a>
-											<div class="rating_roulette">
-												<span class="public_asessment">Оценка</span>
-												<div class="rating rating_active">
-													<div id="rating" class="rating__best">
-														<div class="rating__current" style="display: block; width: 106.6px;"></div>
-														<div class="rating__star rating__star_5" data-title="5"></div>
-														<div class="rating__star rating__star_4" data-title="4"></div>
-														<div class="rating__star rating__star_3" data-title="3"></div>
-														<div class="rating__star rating__star_2" data-title="2"></div>
-														<div class="rating__star rating__star_1" data-title="1"></div>
-													</div>
-												</div>
-												<div class="rating_text"> Рейтинг игроков:
-													<span class="rating-value">4.6</span>
-													/5 - <span class="rating-count">33</span> голосов
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- ? Vavada -->
-						</div>
-
-
-						<!--! ПЕРЕКЛЮЧАТЕЛЬ ОФЕРОВ -->
-						<div class="row tabs">
-							<div id="md-offers" class=" col-3 btn-group-vertical btn-group-sm px-2" role="group" aria-label="MD-Offers">
-								<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
-								<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
-								<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
-								<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
-								<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
-							</div>
-							<div id="sm-offers" class="col-12 mx-auto btn-group btn-group-sm px-0 mt-2" role="group" aria-label="SM-Offers">
-								<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
-								<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
-								<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
-								<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
-								<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
-							</div>
-						</div>
-
+			<div class="tab_content">
+				<!-- ? Slotor -->
+				<div class="row tab_item">
+					<!-- * 1 -->
+					<div id="one" class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+						<a href="#" class="navbar-brand my-1 disabled d-flex justify-content-center align-items-center">
+							<img src="http://www.heifer.org.ua/assets/img/slotor-logo.png" alt="Онлайн Казино Slotor" loading="lazy">
+						</a>
 					</div>
-					<!-- ? iframe -->
-				
+					<!-- * 2 -->
+					<div id="two" class="col-md-6 col-sm-6 col-12 px-2">
+						<p class="h1 my-2 text-center">Бонусы от казино Slotor</p>
+						<p class="lead font-weight-bolder text-center my-3">Бонус <span class="akcent">10% </span>на первый депозит при регистрации!</p>
+						<p class="text-center px-1">Новым игрокам онлайн-казино Slotor дарит приятный бонус 10% на счет за первый депозит!</p>
+					</div>
+					<!-- * 3 -->
+					<div id="three" class="col-md-3 col-sm-6 col-12 border-left px-0 d-flex justify-content-center">
+						<div class="row pt-3">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="rating_casino red-text">95</div>
+							</div>
+							<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+								<a rel="nofollow" href="https://shmeker.net/rmzjvX?source=www.heifer.org.ua" class="visit">Перейти</a>
+								<div class="rating_roulette">
+									<span class="public_asessment">Оценка</span>
+									<div class="rating rating_active">
+										<div id="rating" class="rating__best">
+											<div class="rating__current" style="display: block; width: 106.6px;"></div>
+											<div class="rating__star rating__star_5" data-title="5"></div>
+											<div class="rating__star rating__star_4" data-title="4"></div>
+											<div class="rating__star rating__star_3" data-title="3"></div>
+											<div class="rating__star rating__star_2" data-title="2"></div>
+											<div class="rating__star rating__star_1" data-title="1"></div>
+										</div>
+									</div>
+									<div class="rating_text"> Рейтинг игроков:
+										<span class="rating-value">4.42</span>
+										/5 <br>
+										<span class="rating-count">9</span> голосов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ? Slotor -->
+
+				<!-- ? Joker -->
+				<!-- ! для подключения добавить класс tab_item и раскоментировать кнопки -->
+				<div class="row " style="display: none;">
+					<!-- * 1 -->
+					<div id="one" class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+						<a href="#" class="navbar-brand my-1 disabled d-flex justify-content-center align-items-center">
+							<img src="/assets/img/logo-joker.png" alt="Онлайн Казино Joker" loading="lazy">
+						</a>
+					</div>
+					<!-- * 2 -->
+					<div id="two" class="col-md-6 col-sm-6 col-12 px-2">
+						<p class="h1 my-2 text-center">Бонусы от казино Joker</p>
+						<p class="lead font-weight-bolder text-center mb-3"><span class="akcent">250% + 147 FS</span> бонус на первый депозит!</p>
+						<p class="text-center px-1">Отличное предложение для новичков от Joker Win Casino! Регистрируйтесь на сайте по нашему промокоду, вносите первый депозит на сумму от 100 гривен и получите приятный бонус в виде 250% + 147 FS!</p>
+					</div>
+					<!-- * 3 -->
+					<div id="three" class="col-md-3 col-sm-6 col-12 border-left px-0 d-flex justify-content-center">
+						<div class="row mt-3">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="rating_casino red-text">95</div>
+							</div>
+							<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+								<a rel="nofollow" href="#" class="visit">Перейти</a>
+								<div class="rating_roulette">
+									<span class="public_asessment">Оценка</span>
+									<div class="rating rating_active">
+										<div id="rating" class="rating__best">
+											<div class="rating__current" style="display: block; width: 106.6px;"></div>
+											<div class="rating__star rating__star_5" data-title="5"></div>
+											<div class="rating__star rating__star_4" data-title="4"></div>
+											<div class="rating__star rating__star_3" data-title="3"></div>
+											<div class="rating__star rating__star_2" data-title="2"></div>
+											<div class="rating__star rating__star_1" data-title="1"></div>
+										</div>
+									</div>
+									<div class="rating_text"> Рейтинг игроков:
+										<span class="rating-value">4.9</span>
+										/5 <br>
+										<span class="rating-count">25</span> голосов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ? Joker -->
+
+				<!-- ? Pin-up -->
+				<div class="row tab_item" style="display: none;">
+					<!-- * 1 -->
+					<div id="one" class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+						<a href="#" class="navbar-brand my-1 disabled d-flex justify-content-center align-items-center">
+							<img src="http://www.heifer.org.ua/assets/img/logo-pin-up.png" alt="Онлайн Казино Pin-up" loading="lazy">
+						</a>
+					</div>
+					<!-- * 2 -->
+					<div id="two" class="col-md-6 col-sm-6 col-12 px-2">
+						<p class="h1 my-2 text-center">Бонусы от казино Pin-up</p>
+						<p class="lead font-weight-bolder text-center my-3"><span class="akcent">100% + 250 FS</span><br>Бонус за регистрацию!</p>
+						<!-- ! БЛОК ПРОМОКОДА 3 -->
+						<div class="card-body-action mx-auto">
+							<span class="small text-uppercase">ПРОМОКОД</span>
+							<div class="pm-code-blk">
+								<button id="copy_btn_3" data-target-copy-id="promocode_3" class="copy-btn-bonus" title="Скопировать код">
+									<span class="copy-icon"></span>
+								</button>
+								<div id="promocode_3" class="code">LOTOPLAY</div>
+							</div>
+						</div>
+					</div>
+					<!-- * 3 -->
+					<div id="three" class="col-md-3 col-sm-6 col-12 border-left px-0 d-flex justify-content-center">
+						<div class="row mt-3">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="rating_casino red-text">97</div>
+							</div>
+							<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+								<a rel="nofollow" href="https://shmeker.net/yZvKWH?source=www.heifer.org.ua" class="visit">Перейти</a>
+								<div class="rating_roulette">
+									<span class="public_asessment">Оценка</span>
+									<div class="rating rating_active">
+										<div id="rating" class="rating__best">
+											<div class="rating__current" style="display: block; width: 106.6px;"></div>
+											<div class="rating__star rating__star_5" data-title="5"></div>
+											<div class="rating__star rating__star_4" data-title="4"></div>
+											<div class="rating__star rating__star_3" data-title="3"></div>
+											<div class="rating__star rating__star_2" data-title="2"></div>
+											<div class="rating__star rating__star_1" data-title="1"></div>
+										</div>
+									</div>
+									<div class="rating_text"> Рейтинг игроков:
+										<span class="rating-value">4.56</span>
+										/5 <br>
+										<span class="rating-count">15</span> голосов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ? Pin-up -->
+
+				<!-- ? Joycasino -->
+				<div class="row tab_item" style="display: none;">
+					<!-- * 1 -->
+					<div id="one" class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+						<a href="#" class="navbar-brand my-1 disabled d-flex justify-content-center align-items-center">
+							<img src="http://www.heifer.org.ua/assets/img/logo-Joycasino.png" alt="Онлайн Казино Joycasino" loading="lazy">
+						</a>
+					</div>
+					<!-- * 2 -->
+					<div id="two" class="col-md-6 col-sm-6 col-12 px-2">
+						<p class="h1 my-2 text-center">Бонусы от казино Joycasino</p>
+						<p class="lead font-weight-bolder text-center my-3"><span class="akcent">60 000 ₴ + 200 FS</span><br>Бонус за регистрацию!</p>
+						<!-- ! БЛОК ПРОМОКОДА 4 -->
+						<div class="card-body-action mx-auto">
+							<span class="small text-uppercase">ПРОМОКОД</span>
+							<div class="pm-code-blk">
+								<button id="copy_btn_4" data-target-copy-id="promocode_4" class="copy-btn-bonus" title="Скопировать код">
+									<span class="copy-icon"></span>
+								</button>
+								<div id="promocode_4" class="code">JOYBONUSUA</div>
+							</div>
+						</div>
+					</div>
+					<!-- * 3 -->
+					<div id="three" class="col-md-3 col-sm-6 col-12 border-left px-0 d-flex justify-content-center">
+						<div class="row mt-3">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="rating_casino red-text">94</div>
+							</div>
+							<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+								<a rel="nofollow" href="https://shmeker.net/LKhfVm?source=www.heifer.org.ua" class="visit">Перейти</a>
+								<div class="rating_roulette">
+									<span class="public_asessment">Оценка</span>
+									<div class="rating rating_active">
+										<div id="rating" class="rating__best">
+											<div class="rating__current" style="display: block; width: 106.6px;"></div>
+											<div class="rating__star rating__star_5" data-title="5"></div>
+											<div class="rating__star rating__star_4" data-title="4"></div>
+											<div class="rating__star rating__star_3" data-title="3"></div>
+											<div class="rating__star rating__star_2" data-title="2"></div>
+											<div class="rating__star rating__star_1" data-title="1"></div>
+										</div>
+									</div>
+									<div class="rating_text"> Рейтинг игроков:
+										<span class="rating-value">4.8</span>
+										/5 <br>
+										<span class="rating-count">13</span> голосов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ? Joycasino -->
+
+				<!-- ? Vavada -->
+				<div class="row tab_item" style="display: none;">
+					<!-- * 1 -->
+					<div id="one" class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+						<a href="#" class="navbar-brand my-1 disabled d-flex justify-content-center align-items-center">
+							<img src="http://www.heifer.org.ua/assets/img/logo-vavada.svg" height="46" width="300" alt="Онлайн Казино Vavada" loading="lazy">
+						</a>
+					</div>
+					<!-- * 2 -->
+					<div id="two" class="col-md-6 col-sm-6 col-12 px-2">
+						<p class="h1 my-2 text-center">Бонусы от казино Vavada</p>
+						<p class="lead font-weight-bolder text-center my-3"><span class="akcent">20 Free Spin</span><br>За регистрацию с промокодом!</p>
+						<!-- ! БЛОК ПРОМОКОДА 5 -->
+						<div class="card-body-action mx-auto">
+							<span class="small text-uppercase">ПРОМОКОД</span>
+							<div class="pm-code-blk">
+								<button id="copy_btn_5" data-target-copy-id="promocode_5" class="copy-btn-bonus" title="Скопировать код">
+									<span class="copy-icon"></span>
+								</button>
+								<div id="promocode_5" class="code">VAVADABONUS</div>
+							</div>
+						</div>
+					</div>
+					<!-- * 3 -->
+					<div id="three" class="col-md-3 col-sm-6 col-12 border-left px-0 d-flex justify-content-center">
+						<div class="row mt-3">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="rating_casino red-text">96</div>
+							</div>
+							<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+								<a rel="nofollow" href="https://shmeker.net/SX7MfH?source=www.heifer.org.ua" class="visit">Перейти</a>
+								<div class="rating_roulette">
+									<span class="public_asessment">Оценка</span>
+									<div class="rating rating_active">
+										<div id="rating" class="rating__best">
+											<div class="rating__current" style="display: block; width: 106.6px;"></div>
+											<div class="rating__star rating__star_5" data-title="5"></div>
+											<div class="rating__star rating__star_4" data-title="4"></div>
+											<div class="rating__star rating__star_3" data-title="3"></div>
+											<div class="rating__star rating__star_2" data-title="2"></div>
+											<div class="rating__star rating__star_1" data-title="1"></div>
+										</div>
+									</div>
+									<div class="rating_text"> Рейтинг игроков:
+										<span class="rating-value">4.6</span>
+										/5 <br>
+										<span class="rating-count">33</span> голосов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ? Vavada -->
+			</div>
 
 
+			<!--! ПЕРЕКЛЮЧАТЕЛЬ ОФЕРОВ -->
+			<div class="row tabs">
+				<div id="md-offers" class="col-3 btn-group-vertical btn-group-sm px-2" role="group" aria-label="MD-Offers">
+					<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
+					<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
+					<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
+				</div>
+				<div id="xs-offers" class="col-12 btn-group-vertical btn-group-sm px-2" role="group" aria-label="xs-offers">
+					<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
+					<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
+					<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
+				</div>
+				<div id="sm-offers" class="col-12 mx-auto btn-group btn-group-sm px-0 mt-2" role="group" aria-label="SM-Offers">
+					<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
+					<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
+					<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
+					<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
+				</div>
+			</div>
+
+		</div>
+		<!-- ? iframe -->
 		<!-- * jquery lib -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 		<!-- * Переключатель динамического контента  -->
