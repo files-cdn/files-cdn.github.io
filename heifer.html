@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="robots" content="noarchive">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="http://www.heifer.org.ua/assets/img/slotor-ico.png" type="image/png">
+
+		<style>
+			:root {
+				--blue: #007bff;
+				--indigo: #6610f2;
+				--purple: #6f42c1;
+				--pink: #e83e8c;
+				--red: #dc3545;
+				--orange: #fd7e14;
+				--yellow: #ffc107;
+				--green: #28a745;
+				--teal: #20c997;
+				--cyan: #17a2b8;
+				--white: #fff;
+				--gray: #6c757d;
+				--gray-dark: #343a40;
+				--primary: #007bff;
+				--secondary: #6c757d;
+				--success: #28a745;
+				--info: #17a2b8;
+				--warning: #ffc107;
+				--danger: #dc3545;
+				--light: #f8f9fa;
+				--dark: #343a40;
+				--breakpoint-xs: 0;
+				--breakpoint-sm: 576px;
+				--breakpoint-md: 768px;
+				--breakpoint-lg: 992px;
+				--breakpoint-xl: 1200px;
+				--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+			}
+
+			*,
+			::after,
+			::before {
+				box-sizing: border-box;
+			}
+
+			html {
+				font-family: sans-serif;
+				line-height: 1.15;
+				-webkit-text-size-adjust: 100%;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			body {
+				margin: 0;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+					"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #212529;
+				text-align: left;
+			}
+
+			[tabindex="-1"]:focus:not(:focus-visible) {
+				outline: 0 !important;
+			}
+
+			.disabled,
+			:disabled {
+				pointer-events: none !important;
+			}
+
+			h1 {
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
+
+			a {
+				color: #007bff;
+				text-decoration: none;
+				background-color: transparent;
+			}
+
+			a:hover {
+				color: #0056b3;
+				text-decoration: underline;
+			}
+
+			img {
+				vertical-align: middle;
+				border-style: none;
+			}
+
+			button {
+				border-radius: 0;
+			}
+
+			button:focus {
+				outline: 1px dotted;
+				outline: 5px auto -webkit-focus-ring-color;
+			}
+
+			button {
+				margin: 0;
+				font-family: inherit;
+				font-size: inherit;
+				line-height: inherit;
+			}
+
+			button {
+				overflow: visible;
+			}
+
+			button {
+				text-transform: none;
+			}
+
+			button {
+				-webkit-appearance: button;
+			}
+
+			[type="button"]:not(:disabled),
+			[type="reset"]:not(:disabled),
+			[type="submit"]:not(:disabled),
+			button:not(:disabled) {
+				cursor: pointer;
+			}
+
+			button::-moz-focus-inner {
+				padding: 0;
+				border-style: none;
+			}
+
+			::-webkit-file-upload-button {
+				font: inherit;
+				-webkit-appearance: button;
+			}
+
+			h1 {
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+				line-height: 1.2;
+			}
+
+			h1 {
+				font-size: 2.5rem;
+			}
+
+			.lead {
+				font-size: 1.15rem;
+				font-weight: 300;
+			}
+
+			.h-100 {
+				height: 100% !important;
+			}
+
+			.mx-0 {
+				margin-right: 0 !important;
+			}
+
+			.mx-0 {
+				margin-left: 0 !important;
+			}
+
+			.mt-2 {
+				margin-top: 0.5rem !important;
+			}
+
+			.my-3 {
+				margin-top: 1rem !important;
+			}
+
+			.mb-3,
+			.my-3 {
+				margin-bottom: 1rem !important;
+			}
+
+			.mt-4 {
+				margin-top: 1.5rem !important;
+			}
+
+			.px-0 {
+				padding-right: 0 !important;
+			}
+
+			.px-0 {
+				padding-left: 0 !important;
+			}
+
+			.py-1 {
+				padding-top: 0.25rem !important;
+			}
+
+			.py-1 {
+				padding-bottom: 0.25rem !important;
+			}
+
+			.pt-2 {
+				padding-top: 0.5rem !important;
+			}
+
+			.px-2 {
+				padding-right: 0.5rem !important;
+			}
+
+			.px-2 {
+				padding-left: 0.5rem !important;
+			}
+
+			.px-3 {
+				padding-right: 1rem !important;
+			}
+
+			.px-3 {
+				padding-left: 1rem !important;
+			}
+
+			.container-fluid {
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.row {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin-right: -15px;
+				margin-left: -15px;
+			}
+
+			.col-12,
+			.col-3,
+			.col-md-12,
+			.col-md-3,
+			.col-md-6,
+			.col-sm-12,
+			.col-sm-6 {
+				position: relative;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			.col-12,
+			.col-md-12,
+			.col-md-3,
+			.col-md-6,
+			.col-sm-12,
+			.col-sm-6 {
+				position: relative;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			.col-3 {
+				-ms-flex: 0 0 25%;
+				flex: 0 0 25%;
+				max-width: 25%;
+			}
+
+			.col-12 {
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			@media (min-width: 576px) {
+
+				.col-sm-6 {
+					-ms-flex: 0 0 50%;
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+
+				.col-sm-12 {
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+			}
+
+			@media (min-width: 768px) {
+				.col-md-3 {
+					-ms-flex: 0 0 25%;
+					flex: 0 0 25%;
+					max-width: 25%;
+				}
+
+				.col-md-6 {
+					-ms-flex: 0 0 50%;
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+
+				.col-md-12 {
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+			}
+
+			.border-right {
+				border-right: 1px solid #dee2e6 !important;
+			}
+
+			.border-left {
+				border-left: 1px solid #dee2e6 !important;
+			}
+
+			.d-flex {
+				display: -ms-flexbox !important;
+				display: flex !important;
+			}
+
+			.justify-content-center {
+				-ms-flex-pack: center !important;
+				justify-content: center !important;
+			}
+
+			@supports ((position: -webkit-sticky) or (position: sticky)) {}
+
+			.h-100 {
+				height: 100% !important;
+			}
+
+			.mx-0 {
+				margin-right: 0 !important;
+			}
+
+			.mx-0 {
+				margin-left: 0 !important;
+			}
+
+			.mt-2 {
+				margin-top: 0.5rem !important;
+			}
+
+			.my-3 {
+				margin-top: 1rem !important;
+			}
+
+			.my-3 {
+				margin-bottom: 1rem !important;
+			}
+
+			.mt-4 {
+				margin-top: 1.5rem !important;
+			}
+
+			.px-0 {
+				padding-right: 0 !important;
+			}
+
+			.px-0 {
+				padding-left: 0 !important;
+			}
+
+			.py-1 {
+				padding-top: 0.25rem !important;
+			}
+
+			.py-1 {
+				padding-bottom: 0.25rem !important;
+			}
+
+			.pt-2 {
+				padding-top: 0.5rem !important;
+			}
+
+			.px-2 {
+				padding-right: 0.5rem !important;
+			}
+
+			.px-2 {
+				padding-left: 0.5rem !important;
+			}
+
+			.px-3 {
+				padding-right: 1rem !important;
+			}
+
+			.px-3 {
+				padding-left: 1rem !important;
+			}
+
+			.mx-auto {
+				margin-right: auto !important;
+			}
+
+			.mx-auto {
+				margin-left: auto !important;
+			}
+
+			.text-center {
+				text-align: center !important;
+			}
+
+			.text-uppercase {
+				text-transform: uppercase !important;
+			}
+
+			@media print {
+
+				*,
+				::after,
+				::before {
+					text-shadow: none !important;
+					box-shadow: none !important;
+				}
+
+				a:not(.btn) {
+					text-decoration: underline;
+				}
+
+				img {
+					page-break-inside: avoid;
+				}
+
+				p {
+					orphans: 3;
+					widows: 3;
+				}
+
+				@page {
+					size: a3;
+				}
+
+				body {
+					min-width: 992px !important;
+				}
+			}
+
+			/**/
+
+			/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
+
+			body,
+			h1,
+			html,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			h1 {
+				font-size: 100%;
+				font-weight: 400;
+			}
+
+			button {
+				margin: 0;
+			}
+
+			html {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			*,
+			:after,
+			:before {
+				-webkit-box-sizing: inherit;
+				box-sizing: inherit;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			html {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				background-color: #f5f5f5;
+				min-width: 320px;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				font-size: 16px;
+				text-rendering: optimizeLegibility;
+				-webkit-text-size-adjust: 100%;
+				-moz-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+				text-size-adjust: 100%;
+			}
+
+			body,
+			button {
+				font-family: Lato, sans-serif;
+			}
+
+			body {
+				color: #000;
+				font-size: 1em;
+				font-weight: 400;
+				line-height: 1.44;
+			}
+
+			a {
+				cursor: pointer;
+				color: #47b;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #ba0000;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			span {
+				font-style: inherit;
+				font-weight: inherit;
+			}
+
+			.button:focus:not(:active) {
+				-webkit-box-shadow: 0 0 0 0.125em rgba(68, 119, 187, 0.25);
+				box-shadow: 0 0 0 0.125em rgba(68, 119, 187, 0.25);
+			}
+
+			h1 {
+				margin-bottom: 0.5rem;
+				line-height: 1.32;
+			}
+
+			h1 {
+				font-size: 1.25rem;
+			}
+
+			@media print,
+			screen and (min-width: 769px) {
+				h1 {
+					font-size: 1.875rem;
+				}
+			}
+
+			.button:focus:not(:active) {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+
+			.button.button-1:focus:not(:active) {
+				-webkit-box-shadow: 0 0 0 0.125em rgba(59, 149, 139, 0.25);
+				box-shadow: 0 0 0 0.125em rgba(59, 149, 139, 0.25);
+			}
+
+			.button.button-2:focus:not(:active) {
+				-webkit-box-shadow: 0 0 0 0.125em rgba(171, 0, 51, 0.25);
+				box-shadow: 0 0 0 0.125em rgba(171, 0, 51, 0.25);
+			}
+
+			.button.button-3:focus:not(:active) {
+				-webkit-box-shadow: 0 0 0 0.125em rgba(1, 44, 87, 0.25);
+				box-shadow: 0 0 0 0.125em rgba(1, 44, 87, 0.25);
+			}
+
+			.btn:not(:disabled):not(.disabled) {
+				cursor: pointer;
+			}
+
+			.btn:disabled {
+				opacity: 0.8;
+			}
+
+			@supports ((-webkit-clip-path: polygon(0 0, 0% 100%, 100% 0)) or (clip-path: polygon(0 0, 0% 100%, 100% 0))) {
+			}
+
+			@-moz-document url-prefix() {
+			}
+
+			.rating_roulette {
+				margin-top: 10px;
+			}
+
+			.rating {
+				position: relative;
+				width: 130px;
+				height: 35px;
+				margin: 0 auto;
+			}
+
+			.rating_text {
+				font-size: 11px;
+				color: #989898;
+			}
+
+			.rating__best {
+				background: url(http://www.heifer.org.ua/assets/img/stars.png) no-repeat;
+				width: 130px;
+				height: 35px;
+				position: absolute;
+				background-size: 130px 210px;
+			}
+
+			.rating__star {
+				width: 26px;
+				height: 35px;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			.rating__star_1 {
+				left: 0;
+			}
+
+			.rating__star_2 {
+				left: 26px;
+			}
+
+			.rating__star_3 {
+				left: 52px;
+			}
+
+			.rating__star_4 {
+				left: 78px;
+			}
+
+			.rating__star_5 {
+				left: 104px;
+			}
+
+			.rating__current {
+				background: url(http://www.heifer.org.ua/assets/img/stars.png) 0 -35px no-repeat;
+				height: 35px;
+				position: absolute;
+				background-size: 130px 210px;
+			}
+
+			@font-face {
+				font-family: Conv_wiguru;
+				src: url(/assets/fonts/wiguru.eot);
+				src: local("WiGuru"), url(/assets/fonts/wiguru.woff) format("woff"),
+					url(/assets/fonts/wiguru.ttf) format("truetype"), url(/assets/fonts/wiguru.svg) format("svg");
+				font-weight: 400;
+				font-display: swap;
+				font-style: normal;
+			}
+
+			/* @font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url(/assets/fonts/fa-regular-400.eot);
+    src: url(/assets/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/fa-regular-400.woff2) format("woff2"), url(/assets/fonts/fa-regular-400.woff) format("woff"), url(/assets/fonts/fa-regular-400.ttf) format("truetype"), url(/assets/fonts/fa-regular-400.svg#fontawesome) format("svg");
+} */
+
+			.bnt_block .visit {
+				width: 90%;
+				color: #fff;
+				font-weight: 700;
+				font-size: 17px;
+				padding: 7px 0;
+				margin: 30px 0 0 0;
+				text-decoration: none;
+				display: inline-block;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+
+			h1 {
+				color: #000;
+				font-size: 24px !important;
+				line-height: 1.4;
+				font-weight: 700 !important;
+				padding: 0 0 7px 0;
+			}
+
+			.bnt_block {
+				width: 100%;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+			.rating_casino {
+				display: inline-block;
+				font-size: 40px;
+				line-height: 42px;
+				font-weight: 700;
+				padding: 14px;
+				border: 2px solid #10921b;
+				border-radius: 50%;
+			}
+
+			.visit {
+				background-color: #ffd167;
+				box-shadow: 0 0 2px #ffd167, inset 0 -4px 1px #84610f;
+				color: #000 !important;
+				cursor: pointer;
+			}
+
+			.visit:hover {
+				color: #fff;
+				background-color: #ffc107;
+				box-shadow: 0 0 2px #bababa, inset 0 -4px 1px #75580a;
+			}
+
+			.bnt_block .visit {
+				width: 90%;
+				color: #fff;
+				font-weight: 700;
+				font-size: 17px;
+				padding: 4px 0 7px 0;
+				margin: 8px 0 0 0;
+				text-decoration: none;
+				display: inline-block;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 0 !important;
+				line-height: 25px !important;
+				align-items: center;
+			}
+
+			/* *** for SEO text *** */
+
+			/* *** for SEO text *** /end */
+
+			/* TOC */
+
+			/* / ez-toc-list */
+
+			/* breadcrumbs */
+
+			/* / breadcrumbs */
+
+
+
+			.btn-group,
+			.btn-group-vertical {
+				position: relative;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				vertical-align: middle;
+			}
+
+			.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			.btn-group,
+			.btn-group-vertical {
+				position: relative;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				vertical-align: middle;
+			}
+
+			.btn-group-vertical>.btn,
+			.btn-group>.btn {
+				position: relative;
+				-ms-flex: 1 1 auto;
+				flex: 1 1 auto;
+			}
+
+			.btn-group-vertical>.btn:hover,
+			.btn-group>.btn:hover {
+				z-index: 1;
+			}
+
+			.btn-group-vertical>.btn:active,
+			.btn-group-vertical>.btn:focus,
+			.btn-group>.btn:active,
+			.btn-group>.btn:focus {
+				z-index: 1;
+			}
+
+			.btn-group>.btn:not(:first-child) {
+				margin-left: -1px;
+			}
+
+			.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			.btn-group>.btn:not(:first-child) {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			.btn-group-vertical {
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+
+			.btn-group-vertical>.btn {
+				width: 100%;
+			}
+
+			.btn-group-vertical>.btn:not(:first-child) {
+				margin-top: -1px;
+			}
+
+			.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle) {
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			.btn-group-vertical>.btn:not(:first-child) {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			.small {
+				font-size: 80%;
+				font-weight: 400;
+			}
+
+			.cupon_btn {
+				background-color: #ffd167;
+				box-shadow: 0 0 2px #ffd167, inset 0 -4px 1px #84610f;
+				color: #000;
+				cursor: pointer;
+				border: none;
+				padding: 0.25rem 0.5rem;
+				font-size: 18px;
+				border-radius: 3px;
+				font-weight: bold;
+				margin: 0.375rem;
+				color: inherit;
+				text-transform: uppercase;
+			}
+
+			.btn-group-sm>.btn {
+				padding: 0.25rem 0.5rem;
+				font-size: 16px;
+				line-height: 1.5;
+				border-radius: 0.2rem;
+			}
+
+			.btn-group-vertical {
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+
+			.btn-group-vertical>.btn {
+				width: 100%;
+			}
+
+			.btn-group-vertical>.btn:not(:first-child) {
+				margin-top: -1px;
+			}
+
+			.btn-group-vertical>.btn:not(:first-child) {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			.cupon_btn:hover {
+				background-color: #ffc107;
+				box-shadow: 0 0 2px #bababa, inset 0 -4px 1px #75580a;
+			}
+
+			.cupon_btn:focus {
+				outline: none;
+			}
+
+			.font-weight-bolder {
+				font-weight: bolder !important;
+			}
+
+			.my-3 {
+				margin-top: 1rem !important;
+			}
+
+			.d-flex {
+				display: -ms-flexbox !important;
+				display: flex !important;
+			}
+
+			@media (min-width: 576px) and (max-width: 767px) {
+
+				.card-body-action {
+					transform: scale(0.85);
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				.border-left,
+				.border-right {
+					border: none !important;
+				}
+			}
+
+			/* start динамического контента */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			/* ! на 4 промо */
+			#md-offers {
+				position: absolute;
+				bottom: -12px;
+				left: -7.1px;
+				transform: scale(1, 0.85);
+			}
+
+			/* ! на 5 промо */
+			/* #md-offers {
+    position: absolute;
+    bottom: -18px;
+    left: -7.1px;
+    transform: scale(1, 0.75);
+} */
+			#sm-offers {
+				display: none !important;
+			}
+
+			@media (max-width: 767px) {
+				#md-offers {
+					display: none !important;
+				}
+
+				#sm-offers {
+					display: inline-flex !important;
+					transform: scale(0.95);
+				}
+			}
+
+			@media (max-width: 392px) {
+
+				.btn-group-sm>.btn {
+					font-size: 12px;
+				}
+			}
+
+			@media (max-width: 390px) {
+				.lead {
+					font-size: 0.9rem !important;
+				}
+			}
+
+			/* PROMOCODE COPY */
+			.card-body-action {
+				width: 235px;
+				margin-top: 30px;
+			}
+
+			.card-body-action span {
+				margin-left: 5px;
+			}
+
+			.pm-code-blk {
+				position: relative;
+				top: 1px;
+				margin: 0;
+				text-align: center;
+				width: 235px;
+				position: relative;
+				display: flex;
+				margin: 0 auto;
+			}
+
+			.pm-code-blk .code {
+				border-radius: 2px 0 0 2px;
+				background: #fff;
+				font-size: 20px;
+				font-weight: 500;
+				text-align: center;
+				white-space: nowrap;
+				width: 180px;
+				height: 45px;
+				line-height: 45px;
+				color: #000;
+				border: 1px solid #d9d9d9;
+				outline: none;
+			}
+
+			.pm-code-blk .copy-btn-bonus {
+				width: 55px;
+				height: 43px;
+				margin-top: 1px;
+				border: none;
+				display: inline-block;
+				vertical-align: top;
+				border-radius: 0 2px 2px 0;
+				outline: none;
+				cursor: pointer;
+				background-color: #ffc107;
+				box-shadow: -1px 0px 2px #555;
+				order: 2;
+			}
+
+
+			.pm-code-blk .copy-btn-bonus .copy-icon {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				position: relative;
+				top: 1px;
+				left: -2px;
+			}
+
+			.pm-code-blk .copy-btn-bonus .copy-icon {
+				background: url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="svg-icon-copy"><path d="M20 1.25H5a2.507 2.507 0 00-2.5 2.5v17.5H5V3.75h15v-2.5z"></path><path d="M10 8.75v17.5h13.75V8.75H10zm0-2.5h13.75a2.5 2.5 0 012.5 2.5v17.5a2.5 2.5 0 01-2.5 2.5H10a2.5 2.5 0 01-2.5-2.5V8.75a2.5 2.5 0 012.5-2.5z"></path></svg>') no-repeat;
+			}
+
+			/* END PROMOCODE COPY */
+		</style>
+
+
+	</head>
+
+	<body>
+
+		
+					<!-- ? iframe -->
+					<div class="container-fluid ">
+
+						<!--! СТРОКА ДЛЯ ОФЕРОВ -->
+
+						<div class="tab_content">
+							<!-- ? Slotor -->
+							<div class="row tab_item">
+								<!-- * 1 -->
+								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+									<a href="#" class="navbar-brand disabled my-3 mx-0 text-center ">
+										<img src="/assets/img/slotor-logo.png" alt="Онлайн Казино Slotor" loading="lazy">
+									</a>
+								</div>
+								<!-- * 2 -->
+								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
+									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Slotor</h1>
+
+									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
+
+									<!-- ! БЛОК ПРОМОКОДА 1 -->
+									<div class="card-body-action mx-auto">
+										<span class="small text-uppercase">SLOTOR promocode</span>
+										<div class="pm-code-blk">
+											<button id="copy_btn_1" data-target-copy-id="promocode_1" class="copy-btn-bonus" title="Скопировать код">
+												<span class="copy-icon"></span>
+											</button>
+											<div id="promocode_1" class="code">Казино Slotor</div>
+										</div>
+									</div>
+								</div>
+								<!-- * 3 -->
+								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
+									<div class="row mt-2">
+										<div class="col-md-12 col-sm-12 text-center">
+											<div class="rating_casino red-text">95</div>
+										</div>
+										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+											<a rel="nofollow" href="https://shmeker.net/rmzjvX?source=www.heifer.org.ua" class="visit">Перейти</a>
+											<div class="rating_roulette">
+												<span class="public_asessment">Оценка</span>
+												<div class="rating rating_active">
+													<div id="rating" class="rating__best">
+														<div class="rating__current" style="display: block; width: 106.6px;"></div>
+														<div class="rating__star rating__star_5" data-title="5"></div>
+														<div class="rating__star rating__star_4" data-title="4"></div>
+														<div class="rating__star rating__star_3" data-title="3"></div>
+														<div class="rating__star rating__star_2" data-title="2"></div>
+														<div class="rating__star rating__star_1" data-title="1"></div>
+													</div>
+												</div>
+												<div class="rating_text"> Рейтинг игроков:
+													<span class="rating-value">4.42</span>
+													/5 - <span class="rating-count">9</span> голосов
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ? Slotor -->
+
+							<!-- ? Joker -->
+							<!-- ! для подключения добавить класс tab_item и раскоментировать кнопки -->
+							<div class="row " style="display: none;">
+								<!-- * 1 -->
+								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
+										<img src="/assets/img/logo-joker.png" alt="Онлайн Казино Joker" loading="lazy">
+									</a>
+								</div>
+								<!-- * 2 -->
+								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
+									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Joker</h1>
+
+									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
+
+									<!-- ! БЛОК ПРОМОКОДА 1 -->
+									<div class="card-body-action mx-auto">
+										<span class="small text-uppercase">Joker promocode</span>
+										<div class="pm-code-blk">
+											<button id="copy_btn_2" data-target-copy-id="promocode_2" class="copy-btn-bonus" title="Скопировать код">
+												<span class="copy-icon"></span>
+											</button>
+											<div id="promocode_2" class="code">Казино Joker</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- * 3 -->
+								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
+									<div class="row mt-2">
+										<div class="col-md-12 col-sm-12 text-center">
+											<div class="rating_casino red-text">95</div>
+										</div>
+										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+											<a rel="nofollow" href="#" class="visit">Перейти</a>
+											<div class="rating_roulette">
+												<span class="public_asessment">Оценка</span>
+												<div class="rating rating_active">
+													<div id="rating" class="rating__best">
+														<div class="rating__current" style="display: block; width: 106.6px;"></div>
+														<div class="rating__star rating__star_5" data-title="5"></div>
+														<div class="rating__star rating__star_4" data-title="4"></div>
+														<div class="rating__star rating__star_3" data-title="3"></div>
+														<div class="rating__star rating__star_2" data-title="2"></div>
+														<div class="rating__star rating__star_1" data-title="1"></div>
+													</div>
+												</div>
+												<div class="rating_text"> Рейтинг игроков:
+													<span class="rating-value">4.9</span>
+													/5 - <span class="rating-count">25</span> голосов
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ? Joker -->
+
+							<!-- ? Pin-up -->
+							<div class="row tab_item" style="display: none;">
+								<!-- * 1 -->
+								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
+										<img src="/assets/img/logo-pin-up.png" alt="Онлайн Казино Pin-up" loading="lazy">
+									</a>
+								</div>
+								<!-- * 2 -->
+								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
+									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Pin-up</h1>
+
+									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
+
+									<!-- ! БЛОК ПРОМОКОДА 3 -->
+									<div class="card-body-action mx-auto">
+										<span class="small text-uppercase">Pin-up promocode</span>
+										<div class="pm-code-blk">
+											<button id="copy_btn_3" data-target-copy-id="promocode_3" class="copy-btn-bonus" title="Скопировать код">
+												<span class="copy-icon"></span>
+											</button>
+											<div id="promocode_3" class="code">LOTOPLAY</div>
+										</div>
+									</div>
+								</div>
+								<!-- * 3 -->
+								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
+									<div class="row mt-2">
+										<div class="col-md-12 col-sm-12 text-center">
+											<div class="rating_casino red-text">97</div>
+										</div>
+										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+											<a rel="nofollow" href="https://shmeker.net/yZvKWH?source=www.heifer.org.ua" class="visit">Перейти</a>
+											<div class="rating_roulette">
+												<span class="public_asessment">Оценка</span>
+												<div class="rating rating_active">
+													<div id="rating" class="rating__best">
+														<div class="rating__current" style="display: block; width: 106.6px;"></div>
+														<div class="rating__star rating__star_5" data-title="5"></div>
+														<div class="rating__star rating__star_4" data-title="4"></div>
+														<div class="rating__star rating__star_3" data-title="3"></div>
+														<div class="rating__star rating__star_2" data-title="2"></div>
+														<div class="rating__star rating__star_1" data-title="1"></div>
+													</div>
+												</div>
+												<div class="rating_text"> Рейтинг игроков:
+													<span class="rating-value">4.56</span>
+													/5 - <span class="rating-count">15</span> голосов
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ? Pin-up -->
+
+							<!-- ? Joycasino -->
+							<div class="row tab_item" style="display: none;">
+								<!-- * 1 -->
+								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
+										<img src="/assets/img/logo-Joycasino.png" alt="Онлайн Казино Joycasino" loading="lazy">
+									</a>
+								</div>
+								<!-- * 2 -->
+								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
+									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Joycasino</h1>
+
+									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
+
+									<!-- ! БЛОК ПРОМОКОДА 4 -->
+									<div class="card-body-action mx-auto">
+										<span class="small text-uppercase">Joycasino promocode</span>
+										<div class="pm-code-blk">
+											<button id="copy_btn_4" data-target-copy-id="promocode_4" class="copy-btn-bonus" title="Скопировать код">
+												<span class="copy-icon"></span>
+											</button>
+											<div id="promocode_4" class="code">JOYBONUSUA</div>
+										</div>
+									</div>
+								</div>
+								<!-- * 3 -->
+								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
+									<div class="row mt-2">
+										<div class="col-md-12 col-sm-12 text-center">
+											<div class="rating_casino red-text">94</div>
+										</div>
+										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+											<a rel="nofollow" href="https://shmeker.net/LKhfVm?source=www.heifer.org.ua" class="visit">Перейти</a>
+											<div class="rating_roulette">
+												<span class="public_asessment">Оценка</span>
+												<div class="rating rating_active">
+													<div id="rating" class="rating__best">
+														<div class="rating__current" style="display: block; width: 106.6px;"></div>
+														<div class="rating__star rating__star_5" data-title="5"></div>
+														<div class="rating__star rating__star_4" data-title="4"></div>
+														<div class="rating__star rating__star_3" data-title="3"></div>
+														<div class="rating__star rating__star_2" data-title="2"></div>
+														<div class="rating__star rating__star_1" data-title="1"></div>
+													</div>
+												</div>
+												<div class="rating_text"> Рейтинг игроков:
+													<span class="rating-value">4.8</span>
+													/5 - <span class="rating-count">13</span> голосов
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ? Joycasino -->
+
+							<!-- ? Vavada -->
+							<div class="row tab_item" style="display: none;">
+								<!-- * 1 -->
+								<div class="col-md-3 col-sm-12 col-12 d-flex justify-content-center pt-2 border-right">
+									<a href="#" class="navbar-brand my-3 mx-0 text-center disabled">
+										<img src="/assets/img/logo-vavada.svg" height="46" width="300" alt="Онлайн Казино Vavada" loading="lazy">
+									</a>
+								</div>
+								<!-- * 2 -->
+								<div class="col-md-6 col-sm-6 col-12 h-100 px-2">
+									<h1 class="mt-4 mb-3 text-center">Онлайн Казино Vavada</h1>
+
+									<p class="lead font-weight-bolder text-center mb-3">Там будет описание промокодного бонуса </p>
+
+									<!-- ! БЛОК ПРОМОКОДА 5 -->
+									<div class="card-body-action mx-auto">
+										<span class="small text-uppercase">Vavada promocode</span>
+										<div class="pm-code-blk">
+											<button id="copy_btn_5" data-target-copy-id="promocode_5" class="copy-btn-bonus" title="Скопировать код">
+												<span class="copy-icon"></span>
+											</button>
+											<div id="promocode_5" class="code">VAVADABONUS</div>
+										</div>
+									</div>
+								</div>
+								<!-- * 3 -->
+								<div class="col-md-3 col-sm-6 col-12 border-left mx-auto h-100 px-0 mt-2 d-flex justify-content-center">
+									<div class="row mt-2">
+										<div class="col-md-12 col-sm-12 text-center">
+											<div class="rating_casino red-text">96</div>
+										</div>
+										<div class="col-md-12 col-sm-12 bnt_block px-3 py-1">
+											<a rel="nofollow" href="https://shmeker.net/SX7MfH?source=www.heifer.org.ua" class="visit">Перейти</a>
+											<div class="rating_roulette">
+												<span class="public_asessment">Оценка</span>
+												<div class="rating rating_active">
+													<div id="rating" class="rating__best">
+														<div class="rating__current" style="display: block; width: 106.6px;"></div>
+														<div class="rating__star rating__star_5" data-title="5"></div>
+														<div class="rating__star rating__star_4" data-title="4"></div>
+														<div class="rating__star rating__star_3" data-title="3"></div>
+														<div class="rating__star rating__star_2" data-title="2"></div>
+														<div class="rating__star rating__star_1" data-title="1"></div>
+													</div>
+												</div>
+												<div class="rating_text"> Рейтинг игроков:
+													<span class="rating-value">4.6</span>
+													/5 - <span class="rating-count">33</span> голосов
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ? Vavada -->
+						</div>
+
+
+						<!--! ПЕРЕКЛЮЧАТЕЛЬ ОФЕРОВ -->
+						<div class="row tabs">
+							<div id="md-offers" class=" col-3 btn-group-vertical btn-group-sm px-2" role="group" aria-label="MD-Offers">
+								<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
+								<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
+								<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
+								<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
+								<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
+							</div>
+							<div id="sm-offers" class="col-12 mx-auto btn-group btn-group-sm px-0 mt-2" role="group" aria-label="SM-Offers">
+								<button type="button" class="btn cupon_btn btn-xs tab">Slotor</button>
+								<!-- <button type="button" class="btn cupon_btn btn-xs tab">Joker</button> -->
+								<button type="button" class="btn cupon_btn btn-xs tab">Pin-up</button>
+								<button type="button" class="btn cupon_btn btn-xs tab">Joycasino</button>
+								<button type="button" class="btn cupon_btn btn-xs tab">Vavada</button>
+							</div>
+						</div>
+
+					</div>
+					<!-- ? iframe -->
+				
+
+
+		<!-- * jquery lib -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<!-- * Переключатель динамического контента  -->
+		<script>
+			$(".tabs .tab").click(function () {
+				$(".tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+				$(".tab_item").hide().eq($(this).index()).fadeIn()
+			}).eq(0).addClass("active");
+		</script>
+		<!-- * Копирование с выдилением на data-target -->
+		<script>
+			function selectText(id) {
+				var sel, range;
+				var el = document.getElementById(id); //get element id
+				if (window.getSelection && document.createRange) { //Browser compatibility
+					sel = window.getSelection();
+					if (sel.toString() == '') { //no text selection
+						window.setTimeout(function () {
+							range = document.createRange(); //range object
+							range.selectNodeContents(el); //sets Range
+							sel.removeAllRanges(); //remove all ranges from selection
+							sel.addRange(range);//add Range to a Selection.
+						}, 1);
+					}
+				} else if (document.selection) { //older ie
+					sel = document.selection.createRange();
+					if (sel.text == '') { //no text selection
+						range = document.body.createTextRange();//Creates TextRange object
+						range.moveToElementText(el);//sets Range
+						range.select(); //make selection.
+					}
+				}
+			}
+
+			var tooltip = '<span class="tooltiptext">\u0421\u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043E!</span>';
+
+			copy_btn_1.onclick = copy_btn_3.onclick = copy_btn_4.onclick = copy_btn_5.onclick = function () {
+				selectText(this.dataset.targetCopyId);
+				this.parentElement.insertAdjacentHTML('beforeend', tooltip);
+				setTimeout(() => document.execCommand("copy"));
+				setTimeout(function () {
+					document.getElementsByClassName("tooltiptext")[0].remove();
+				}, 4000);
+			}
+		</script>
+
+	</body>
+
+</html>
