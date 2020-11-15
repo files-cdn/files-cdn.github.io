@@ -607,7 +607,12 @@ ul.nav-scroller-content{margin:0;padding:0;list-style:none}
 				
 			</article>
 		</div>
-	
+		<script>
+			window.parent.postMessage({
+  sentinel: 'amp',
+  type: 'send-intersections'
+  }, '*');
+		</script>
 		<script>
 			// Copy Poromocode
 			document.addEventListener("DOMContentLoaded", function() {
