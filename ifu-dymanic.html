@@ -479,6 +479,36 @@
 				max-width: 100%;
 				height: auto;
 			}
+			#tooltiptext {
+				position: absolute;
+				display: inline-block;
+				background: rgba(0, 0, 0, 0.9);
+				color: #fff;
+				text-shadow: 0px 0px 0px #fff;
+				box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.65);
+				text-align: center;
+				padding: 9px;
+				border-radius: 6px;
+				z-index: 9;
+				transition: opacity .6s;
+				font-size: 14px;
+				bottom: -10px;
+				left: 19%;
+				letter-spacing: 1px;
+				font-family: sans-serif;
+			}
+			
+
+			#tooltiptext::after {
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -3px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent rgba(0, 0, 0, 0.95) transparent;
+			}
 			.clearfix::after {
 				display: block;
 				clear: both;
@@ -623,6 +653,10 @@
 					max-height: 135px;
 					height: 135px;
 				}
+				#tooltiptext {
+               bottom: -17px;
+               left: 35%;
+            }
 			}
 			@media (max-width: 768px) {
 				.tab {
@@ -681,8 +715,15 @@
 					margin-top: 5px;
 				}
 				#post-ratings-2864 {
-					display: none;
-				}
+               display: none;
+            }
+				#tooltiptext {
+               bottom: -28px;
+               left: 28%;
+            }
+            #tooltiptext::after {
+               display: none;
+            }
 			}
 			@media (max-width: 390px) {
 				.promo-action-code {
@@ -699,6 +740,10 @@
 				.head-cas-block {
 					min-height: 605px;
 				}
+				#tooltiptext {
+               bottom: -31px;
+               left: 20%;
+            }
 			}
 			@media (max-width: 320px) {
 				.progrescas,
