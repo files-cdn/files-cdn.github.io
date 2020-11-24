@@ -15,18 +15,25 @@
 						
 						<div class="casino-page-header-content flex">
 							<div class="casino-page-header-content-left">
-								<div class="casino-page-header-content-logo">
+								<div class="casino-page-header-content-logo active">
 									<picture>
-										<img src="http://shablontest.atwebpages.com/img/joker-logo.png" alt="Joker" title="Joker">
+										<img src="img/joker-logo.png" alt="Joker1" title="Joker1">
 									</picture>
 								</div>
-								<div id="country-flag" class="casino-page-header-content-country flex">
-									<span class="not-available">Принимает игроков из:</span>
+								<div class="casino-page-header-content-logo" style="display: none;">
+									<picture>
+										<img src="img/joker-logo.png" alt="Joker2" title="Joker2">
+									</picture>
 								</div>
-								<div id="country-flag" class="casino-page-header-content-country flex">
-									<span class="not-available-flag">
-									<img class="logo-flag "	src="http://shablontest.atwebpages.com/img/ru.png" title="Россия" alt="Россия"/>
-									</span>
+								<div class="casino-page-header-content-logo" style="display: none;">
+									<picture>
+										<img src="img/joker-logo.png" alt="Joker3" title="Joker3">
+									</picture>
+								</div>
+								<div class="casino-page-header-content-logo" style="display: none;">
+									<picture>
+										<img src="img/joker-logo.png" alt="Joker4" title="Joker4">
+									</picture>
 								</div>
 								<div class="flex top-row mobile">
 									<div class="mainbonus__mobile">
@@ -45,18 +52,43 @@
 										</div>
 										<span class="mainbonus__text_mobile">40 фриспинов по промокоду
 											<span class="get-promocode">
-											CPLAYmob
+											CPLAYmob1
 											</span>
 										</span>
 										<span class="mainbonus__text_mobile" style="display: none;">30 фриспинов по промокоду
 											<span class="get-promocode">
-											CPLAYmob
+											CPLAYmob2
+											</span>
+										</span>
+										<span class="mainbonus__text_mobile" style="display: none;">20 фриспинов по промокоду
+											<span class="get-promocode">
+											CPLAYmob3
+											</span>
+										</span>
+										<span class="mainbonus__text_mobile" style="display: none;">10 фриспинов по промокоду
+											<span class="get-promocode">
+											CPLAYmob4
 											</span>
 										</span>
 									</div>
-									<div class="awards-wrap">
-										<div class='label-awards' style="border:1px solid #FF5722 ">
-											Новый бренд
+									<div class="awards-wrap mobile-awards active">
+										<div class='label-awards' style="border:1px solid #FF5722;">
+											Новый бренд1
+										</div>
+									</div>
+									<div class="awards-wrap mobile-awards" style="display: none;">
+										<div class='label-awards' style="border:1px solid #FF5722;">
+											Новый бренд2
+										</div>
+									</div>
+									<div class="awards-wrap mobile-awards" style="display: none;">
+										<div class='label-awards' style="border:1px solid #FF5722;">
+											Новый бренд3
+										</div>
+									</div>
+									<div class="awards-wrap mobile-awards" style="display: none;">
+										<div class='label-awards' style="border:1px solid #FF5722;">
+											Новый бренд4
 										</div>
 									</div>
 								</div>
@@ -70,18 +102,31 @@
 									<div class="p_s_b_duo_bk">
 										<div class="psb_d_b_1xs tab">
 											<div class="xst_on">
-												<div class="td-bc-logo skip_lazy" style="background: url('http://shablontest.atwebpages.com/img/1.png') 100%/100%; width:100px; height:40px;"></div>
+												<div class="td-bc-logo skip_lazy" style="background: url('img/1.png') 100%/100%; width:100px; height:40px;"></div>
 											</div>
 										</div>
 										<div class="psb_d_b_1xs tab">
 											<div class="xst_on">
-												<div class="td-bc-logo skip_lazy" style="background: url('http://shablontest.atwebpages.com/img/1.png') 100%/100%; width:100px; height:40px;"></div>
+												<div class="td-bc-logo skip_lazy" style="background: url('img/1.png') 100%/100%; width:100px; height:40px;"></div>
+											</div>
+										</div>
+										<div class="psb_d_b_1xs tab">
+											<div class="xst_on">
+												<div class="td-bc-logo skip_lazy" style="background: url('img/1.png') 100%/100%; width:100px; height:40px;"></div>
+											</div>
+										</div>
+										<div class="psb_d_b_1xs tab">
+											<div class="xst_on">
+												<div class="td-bc-logo skip_lazy" style="background: url('img/1.png') 100%/100%; width:100px; height:40px;"></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<a href="#" rel="nofollow">Перейти на сайт</a>
+							<a class="gogogo active" href="#" rel="nofollow">Перейти на сайт1</a>
+							<a class="gogogo" href="#" rel="nofollow" style="display: none;">Перейти на сайт2</a>
+							<a class="gogogo" href="#" rel="nofollow" style="display: none;">Перейти на сайт3</a>
+							<a class="gogogo" href="#" rel="nofollow" style="display: none;">Перейти на сайт4</a>
 						</div>
 						
 					</div>
@@ -165,13 +210,20 @@
 		<script>
 			$(".promo_single_body .tab").click(function () {
 			$(".promo_single_body .tab").removeClass("active").eq($(this).index()).addClass("active");
-			$(".mainbonus__text").hide().eq($(this).index()).fadeIn()
+			$(".mainbonus__text").hide().eq($(this).index()).fadeIn();
+			$(".casino-page-header-content-logo").hide().eq($(this).index()).fadeIn();
+			$(".score").hide().eq($(this).index()).fadeIn();
+			$(".pc-awards").hide().eq($(this).index()).fadeIn();
+			$(".gogogo").hide().eq($(this).index()).fadeIn();fff
 			}).eq(0).addClass("active");
-		</script>
+		</script>ff
 		<script>
 			$(".promo_single_body_mobile .tab").click(function () {
 			$(".promo_single_body_mobile .tab").removeClass("active").eq($(this).index()).addClass("active");
-			$(".mainbonus__text_mobile").hide().eq($(this).index()).fadeIn()
+			$(".mainbonus__text_mobile").hide().eq($(this).index()).fadeIn();
+			$(".casino-page-header-content-logo").hide().eq($(this).index()).fadeIn();
+			$(".mobile-awards").hide().eq($(this).index()).fadeIn();
+			$(".gogogo").hide().eq($(this).index()).fadeIn();
 			}).eq(0).addClass("active");
 		</script>
 	</body>
