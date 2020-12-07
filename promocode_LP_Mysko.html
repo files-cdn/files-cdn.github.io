@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промокод</title>
+    <style>
+        @media screen and (max-width: 450px){
+            .marg {
+                padding: 75px 0 0 10px;
+            }
+        }
+        .form-row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+        .form-row {
+            width: 100%;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .form-item {
+            position: relative;
+            padding-top: 40px;
+            padding-left: 10px;
+        }
+        .form-label {
+            font-size: 16px;
+            line-height: 40px;
+            color: #191919;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .form-label {
+            font-size: 16px;
+            line-height: 40px;
+            color: #191919;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .form-input {
+            background: #FFFFFF;
+            border: 1px solid #DCE6EB;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 46px;
+            padding: 0 15px;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 0;
+            width: 100%;
+            color: #191919;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+        .form-input {
+            background: #FFFFFF;
+            border: 1px solid #DCE6EB;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 46px;
+            padding: 0 15px;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 0;
+            width: 100%;
+            color: #191919;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+        input {
+            overflow: visible;
+        }
+        .form-error {
+            font-size: 16px;
+            line-height: 18px;
+            color: #E46758;
+            padding-top: 3px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .form-error {
+            display: block;
+            padding: 0px;
+        }
+        .form-error {
+            font-size: 16px;
+            line-height: 18px;
+            color: #E46758;
+            padding-top: 3px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .form-error {
+            display: block;
+            padding: 0px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Tahoma, Arial, sans-serif;
+            color: #06D85F;
+            margin: 80px 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 270px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        .popup .close:hover {
+            color: #06D85F;
+        }
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 700px){
+            .popup{
+                width: 70%;
+            }
+        }
+        .btn {
+            padding: 4px 4px;
+            background-color: rgb(177, 158, 150);
+            color: white;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #f5a4d9;
+            background-image: -webkit-linear-gradient(top, #f5a4d9, #c1268c);
+            background-image: -moz-linear-gradient(top, #f5a4d9, #c1268c);
+            background-image: -ms-linear-gradient(top, #f5a4d9, #c1268c);
+            background-image: -o-linear-gradient(top, #f5a4d9, #c1268c);
+            background-image: linear-gradient(to bottom, #f5a4d9, #c1268c);
+            text-decoration: none;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2em;
+            font-weight: lighter;
+            color: #fff;
+            border:none!important;
+        }
+        .btn-primary:hover {
+            background: #fcc0e8!important;
+            background-image: -webkit-linear-gradient(top, #fcc0e8, #d444a4)!important;
+            background-image: -moz-linear-gradient(top, #fcc0e8, #d444a4)!important;
+            background-image: -ms-linear-gradient(top, #fcc0e8, #d444a4)!important;
+            background-image: -o-linear-gradient(top, #fcc0e8, #d444a4)!important;
+            background-image: linear-gradient(to bottom, #fcc0e8, #d444a4)!important;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary:focus, .btn-primary:active, .btn-primary:visited, .btn-primary:link {
+            border: none!important;
+            outline: none!important;
+            box-shadow: none!important;
+        }
+
+        .btn-primary:active, .btn-primary:visited, .btn-primary:link {
+            border: none!important;
+            outline: none!important;
+            box-shadow: none!important;
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- ----------PopUp Promokod-------------- -->
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>Спасибо!</h2>
+        <a class="close" href="#gopopup">&times;</a>
+        <br>
+        <div class="content">
+            Ваша заявка принята.
+        </div>
+    </div>
+</div>
+<div class="marg">
+    <form action="http://work-home.cc.ua/pages/test-LP-Mysko/amp/index.html#popup1" class="become-custumer__form">
+        <div class="form-row" style="justify-content: center;">
+            <div class="form-item">
+                <div class="form-label">Телефон</div>
+                <input required class="form-input" name="phone" placeholder="">
+                <span data-validate-for="phone" class="form-error"></span>
+            </div>
+            <div class="form-item">
+                <div class="form-label">Имя</div>
+                <input required class="form-input" name="client_name_n">
+                <span data-validate-for="client_name_n" class="form-error"></span>
+            </div>
+            <div class="form-item">
+                <input class="btn btn-primary" type="submit" value="Отправить" >
+            </div>
+        </div>
+    </form>
+</div>
+
+
+	</body>  
+</html>
+<!--// GLOBAL FOOTER -->
+
+
+
+
