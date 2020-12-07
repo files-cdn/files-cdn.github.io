@@ -260,31 +260,12 @@
                 <span data-validate-for="client_name_n" class="form-error"></span>
             </div>
             <div class="form-item">
-                <input class="btn btn-primary" onclick="alert('test') type="submit" value="Отправить" >
+                <input class="btn btn-primary" onclick="alert('test')" type="submit" value="Отправить" >
             </div>
         </div>
     </form>
 </div>
-	<script>
-$(function () {
-    $('#someform').submit(function (e) {;
-        $('div.'+$(this).find('input[type="submit"]').attr("rel")).fadeIn(500);
-        $("body").append("<div id='overlay'></div>");
-        $('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-    		e.preventDefault()
-    }); 
-    $('a.close').click(function () {
-        $(this).parent().fadeOut(100);
-        $('#overlay').remove('#overlay');
-        return false;
-    });
-    $('button.close').click(function () {
-        $(this).parent().fadeOut(100);
-        $('#overlay').remove('#overlay');
-        return false;
-    });
-    });
-	</script>
+
 	</body>  
 </html>
 <!--// GLOBAL FOOTER -->
