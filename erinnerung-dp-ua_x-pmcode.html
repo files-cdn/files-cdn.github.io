@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>erinnerung-dp-ua_x-pmcode</title>
+<style>
+*,::after,::before{box-sizing:border-box}
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+.r_p_t {
+  height: 50px;
+  border: 2px dashed #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  position: relative;
+  margin: 14px 0;
+  background-color: #2a2a2a;
+  text-align: center;
+  line-height: 46px;
+}
+
+.like-green-link {
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  background-color: #76ab01;
+  border-bottom: 2px solid #1b9708;
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  height: 50px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+<div class="h_h_r_p click_block">
+  <div id="xbet_promo" class="r_p_t">Bonus Casino X</div>
+  <a id="xbet_button" data-target-copy-id="xbet_promo" class="h_h_r_b like-green-link">Копировать Промокод</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script>
+  function selectText(id) {
+    var sel, range;
+    var el = document.getElementById(id); //get element id
+    if (window.getSelection && document.createRange) { //Browser compatibility
+      sel = window.getSelection();
+      if (sel.toString() == '') { //no text selection
+        window.setTimeout(function () {
+          range = document.createRange(); //range object
+          range.selectNodeContents(el); //sets Range
+          sel.removeAllRanges(); //remove all ranges from selection
+          sel.addRange(range);//add Range to a Selection.
+        }, 1);
+      }
+    } else if (document.selection) { //older ie
+      sel = document.selection.createRange();
+      if (sel.text == '') { //no text selection
+        range = document.body.createTextRange();//Creates TextRange object
+        range.moveToElementText(el);//sets Range
+        range.select(); //make selection.
+      }
+    }
+  }
+
+  /*cupon_button.onclick = */ xbet_button.onclick = function () {
+    selectText(this.dataset.targetCopyId);
+    this.innerText = 'Промокод скопирован';
+
+    setTimeout(() => document.execCommand("copy"));
+    setTimeout(() => document.execCommand("copy"), 100);
+    setTimeout(() => this.innerText = 'Копировать Промокод', 5000);
+  }
+</script>
+
+</body>
+</html>
