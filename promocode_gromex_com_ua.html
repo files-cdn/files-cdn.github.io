@@ -42,7 +42,7 @@
 											</svg>
 										</div>
 										<span class="mainbonus__text_mobile">150% БОНУС + 250 ФРИСПИНОВ
-											<a style="text-decoration: none" class="get-promocode" href="https://shanhay.net/yCYc46?source=plzem.in.ua" rel="nofollow" target="_blank">Перейти</a>
+											<a style="text-decoration: none" class="get-promocode" href="https://shanhay.net/yCYc46?source=plzem.in.ua" rel="nofollow" target="_blank">promocode1</a>
 										</span>
 									</div>
 								</div>
@@ -56,4 +56,74 @@
 				
 			</article>
 		</div>	
+		
+				<script>
+			// Copy Poromocode
+			document.addEventListener("DOMContentLoaded", function() {
+				document.addEventListener('click', function(event) {
+					if (!event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon, .get-promocode'))
+						return;
+					event.preventDefault();
+					copyPromoCode(event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon, .get-promocode'));
+				}, false);
+				document.addEventListener('click', function(event) {
+					if (!event.target.closest('.scopy'))
+						return;
+					event.preventDefault();
+					bid = event.target.dataset.bid;
+					document.querySelector(bid).click();
+				}, false);
+			
+				function copyToClipboard(elem)
+				{
+					var targetId = "_hiddenCopyText_";
+					var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+					var origSelectionStart, origSelectionEnd;
+					if (isInput) {
+						target = elem;
+						origSelectionStart = elem.selectionStart;
+						origSelectionEnd = elem.selectionEnd;
+					} else {
+						target = document.getElementById(targetId);
+						if (!target) {
+							var target = document.createElement("textarea");
+							target.style.opacity = "0";
+							target.id = targetId;
+							elem.appendChild(target);
+						}
+						target.textContent = elem.textContent;
+					}
+					var currentFocus = document.activeElement;
+					target.focus();
+					target.setSelectionRange(0, target.value.length);
+					var succeed;
+					try {
+						succeed = document.execCommand("copy");
+					} catch (e) {
+						succeed = false;
+					}
+					if (currentFocus && typeof currentFocus.focus === "function") {
+						currentFocus.focus();
+					}
+					if (isInput) {
+						elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+					} else {
+						target.textContent = "";
+					}
+					target.blur();
+					elem.removeChild(target);
+					a = elem.innerText;
+					elem.innerText = 'Промокод скопирован';
+					setTimeout(() => elem.innerText = a, 3000);
+					return succeed;
+				}
+			
+				function copyPromoCode(el)
+				{
+					bText = event.target.innerText;
+					//console.log(bText);
+					copyToClipboard(event.target);
+				}
+			});
+		</script>
 </body></html>
