@@ -61,10 +61,10 @@
 			// Copy Poromocode
 			document.addEventListener("DOMContentLoaded", function() {
 				document.addEventListener('click', function(event) {
-					if (!event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon, .get-promocode'))
+					if (!event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon'))
 						return;
 					event.preventDefault();
-					copyPromoCode(event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon, .get-promocode'));
+					copyPromoCode(event.target.closest('.bonus-table-content-code-value.has-icon, .code-value.has-icon'));
 				}, false);
 				document.addEventListener('click', function(event) {
 					if (!event.target.closest('.scopy'))
