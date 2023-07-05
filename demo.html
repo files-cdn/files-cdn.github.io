@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="noindex, follow, noarchive">
+      <title>Demo Versiyonu Lucky Jet</title>
+      <style>
+         
+*,
+::after,
+::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #111;
+	text-align: left;
+	background-color: #fff
+}
+
+::-webkit-file-upload-button {
+	font: inherit;
+	-webkit-appearance: button
+}
+
+::-moz-selection {
+	background-color: #4d3bfe;
+	color: #fff
+}
+
+::selection {
+	background-color: #4d3bfe;
+	color: #fff
+}
+
+html {
+	position: relative;
+	min-height: 100%
+}
+
+body {
+	font-family: Montserrat, Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	background: #fff;
+	/* margin-bottom: 121px; */
+	word-wrap: break-word;
+	overflow-wrap: break-word
+}
+
+
+.iframe {
+    max-width: 1190px;
+    max-height: 670px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+#playGame {
+    width: inherit;
+    margin: 0.7rem auto;
+}
+
+.adaptive:empty.demo {
+    background: url(../images/lucky-jet-bg.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.adaptive:empty {
+    max-width: 100%;
+    padding-top: 52%;
+    margin-top: 1.5rem;
+}
+@media (min-width: 920px){
+.adaptive:empty {
+    padding-top: 52%;
+}}
+.adaptive.demo {
+    padding-top: 60%;
+}
+.adaptive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+}
+.adaptive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: unset;
+    max-height: 90vh;
+}
+/* **** */
+
+:active, :hover, :focus {
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+.adaptive:empty::before {
+    content: '';
+    background-image: url(../images/lets-play.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+    width: -webkit-fill-available;
+    background-size: 40%;
+    min-height: 100%;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    top: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+    filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+}
+@media (max-width: 800px){
+.adaptive:empty::before {
+    margin-left: 50px;
+    margin-right: 50px;
+}}
+@-webkit-keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+  @keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+      </style>
+   </head>
+   <body>
+<div class="adaptive demo" id="playGame"></div>
+
+      <script>
+         document.getElementById('playGame').onclick = function include(url) {
+             var url = 'https://lucky-jet.1play.one/?exitUrl=null&language=tr&b=demo'
+             var iframe = document.createElement('iframe');
+             iframe.src = url;
+             document.getElementsByClassName('adaptive')[0].appendChild(iframe);
+             document.getElementById('playGame').onclick = null;};
+     </script>
+   </body>
+</html>
