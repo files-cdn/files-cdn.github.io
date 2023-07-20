@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Copier</title>
+
+<style>
+/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* ↓ Стили для настройки цвета копирования ↓ */
+::selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+
+
+/* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
+.modal_promo_promocode_block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.modal_promocode {
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    border: 2px dashed #000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.38);
+}
+div {
+    width: 48%;
+}
+.modal_promocode_copy {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #ffa420;
+    color: white;
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+<body>
+      <div class="modal_promo_promocode_block" bis_skin_checked="1">                                      
+    <div id="promocode" class="modal_promocode" bis_skin_checked="1">PINUPWIN</div>
+    <div class="modal_promocode_copy" bis_skin_checked="1">             
+        <a id="modal_copy" data-target-copy-id="promocode">Копировать промокод</a>
+    </div>    
+    </div>
+<script>
+            function selectText(id) {
+                var sel, range;
+                var el = document.getElementById(id); //get element id
+                if (window.getSelection && document.createRange) { //Browser compatibility
+                    sel = window.getSelection();
+                    if (sel.toString() == '') { //no text selection
+                        window.setTimeout(function () {
+                            range = document.createRange(); //range object
+                            range.selectNodeContents(el); //sets Range
+                            sel.removeAllRanges(); //remove all ranges from selection
+                            sel.addRange(range);//add Range to a Selection.
+                        }, 1);
+                    }
+                } else if (document.selection) { //older ie
+                    sel = document.selection.createRange();
+                    if (sel.text == '') { //no text selection
+                        range = document.body.createTextRange();//Creates TextRange object
+                        range.moveToElementText(el);//sets Range
+                        range.select(); //make selection.
+                    }
+                }
+            }
+                
+                var modal_copy = document.getElementById("modal_copy");
+                
+                modal_copy.addEventListener('click', function () {
+                selectText(modal_copy.dataset.targetCopyId);
+                modal_copy.innerText = 'Промокод скопировано';
+
+
+                setTimeout(() => document.execCommand("copy"));
+                setTimeout(() => document.execCommand("copy"), 100);
+                setTimeout(() => modal_copy.innerText = 'ПОЛУЧИТЬ БОНУС', 5000);
+            });
+        </script>
+
+</body>
+</html>
