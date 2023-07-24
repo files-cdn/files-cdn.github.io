@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Demo-aviator</title>
+
+<style>
+/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* ↓ Стили для настройки цвета копирования ↓ */
+::selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+
+
+/* ↓ Стили для блока demo-aviator ↓ */
+#playGame {
+    width:inherit;
+    margin: .7rem auto;
+}
+
+.adaptive:empty.aviator-spribe {
+    background: url(http://www.kazecon.kz/img/aviator-spribe.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.adaptive.aviator-spribe {
+  padding-top:75%;
+}
+@media (min-width:920px) {
+  .adaptive:empty{padding-top:52%;}
+  }
+@media (max-width:768px) {
+  .adaptive.aviator-spribe{padding-top:120%;}
+  }  
+  @media (max-width:600px) {
+  .adaptive.aviator-spribe{padding-top:160%;}
+  } 
+  @media (max-width:400px) {
+  .adaptive.aviator-spribe{padding-top:200%;}
+  } 
+.adaptive iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    border:unset;
+    max-height:90vh;
+}
+.adaptive{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    padding-top:75%;
+    margin-bottom:1rem;
+    margin-top:1.5rem;
+    max-width:100%;
+}
+.adaptive:empty{
+  max-width:100%;
+  padding-top:52%;
+  margin-top:1.5rem;
+}
+.adaptive:empty::before{
+    content: '';
+    background-image:url(http://www.kazecon.kz/img/lets-play.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+    width: -webkit-fill-available;
+    background-size: 40%;
+    min-height: 100%;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    top: 0;
+  margin-left: 200px;
+  margin-right: 200px;
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+            filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+    }
+  @media (max-width:800px){
+    .adaptive:empty::before{
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+  @-webkit-keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+  @keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+
+</style>
+
+</head>
+<body>
+      <div class="wrapper-70">
+                                    <div class="iframe">
+                                        <div class="adaptive aviator-spribe" id="playGame"></div>
+                                    </div>
+                                </div>
+<script>
+        document.getElementById('playGame').onclick = function include(url) {
+            var url = 'https://demo.spribe.io/launch/aviator?currency=USD&lang=EN'
+            var iframe = document.createElement('iframe');
+            iframe.src = url;
+            document.getElementsByClassName('adaptive')[0].appendChild(iframe);
+            document.getElementById('playGame').onclick = null;};
+    </script>
+    <script>
+        function downloadJSAtOnload() {
+            setTimeout(downloadJSAtOnloadScript, 2000);
+        };
+        function downloadJSAtOnloadScript() {
+            var element = document.createElement("script");
+            document.body.appendChild(element);
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else
+            window.onload = downloadJSAtOnload;
+    </script>
+
+</body>
+</html>
