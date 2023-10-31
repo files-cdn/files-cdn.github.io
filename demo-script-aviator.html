@@ -65,6 +65,11 @@ body {
     width: inherit;
     margin: .7rem auto;
 }
+.adaptive:empty {
+    max-width: 100%;
+    padding-top: 52%;
+    margin-top: 1.5rem;
+}
 
 .adaptive:empty.aviator-spribe {
     background: url(https://young-aviators.com/wp-content/uploads/aviator-spribe.png) center;
@@ -95,11 +100,17 @@ body {
     .adaptive:empty.aviator-spribe {
     background: url(https://young-aviators.com/wp-content/uploads/demo-tablet.webp) center;
 }
+    .adaptive:empty {
+        padding-top:120%;
+    }
 }
 @media (max-width: 420px) {
     .adaptive:empty.aviator-spribe {
     background: url(https://young-aviators.com/wp-content/uploads/demo-mob.webp) center;
 }
+.adaptive:empty {
+        padding-top:300%;
+    }
 }
 
 .adaptive iframe {
@@ -124,11 +135,7 @@ body {
     max-width: 100%;
 }
 
-.adaptive:empty {
-    max-width: 100%;
-    padding-top: 52%;
-    margin-top: 1.5rem;
-}
+
 
 .adaptive:empty::before {
     content: '';
