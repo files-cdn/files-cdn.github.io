@@ -290,21 +290,6 @@ iframe {
             document.getElementsByClassName('adaptive')[0].appendChild(iframe);
             document.getElementById('playGame').onclick = null;};
     </script>
-    <script>
-        function downloadJSAtOnload() {
-            setTimeout(downloadJSAtOnloadScript, 2000);
-        };
-        function downloadJSAtOnloadScript() {
-            var element = document.createElement("script");
-            document.body.appendChild(element);
-        }
-        if (window.addEventListener)
-            window.addEventListener("load", downloadJSAtOnload, false);
-        else if (window.attachEvent)
-            window.attachEvent("onload", downloadJSAtOnload);
-        else
-            window.onload = downloadJSAtOnload;
-    </script>
 
 </body>
 </html>
