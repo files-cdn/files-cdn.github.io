@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DEMO</title>
+
+<style>
+/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* ↓ Стили для настройки цвета копирования ↓ */
+::selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+
+
+/* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
+body {
+    color: #fbfbfc;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    background: inherit;
+    -webkit-transition: padding-bottom .4s ease-in-out;
+    -o-transition: padding-bottom .4s ease-in-out;
+    transition: padding-bottom .4s ease-in-out;
+    }
+.iframe {
+    width: 100%;
+    max-width: 1190px;
+    max-height: 670px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+#playGame {
+    width: inherit;
+    margin: .7rem auto;
+}
+.adaptive:empty {
+    max-width: 100%;
+    padding-top: 52%;
+    margin-top: 1.5rem;
+}
+
+.adaptive:empty.jet-x {
+    background: url(../img/jetx-demo.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.adaptive.jet-x {
+    padding-top: 42%;
+}
+
+@media (min-width: 920px) {
+    .adaptive:empty {
+        padding-top:52%;
+    }
+}
+
+@media (max-width: 800px) {
+    .adaptive.jet-x {
+        padding-top:50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .adaptive.jet-x {
+        padding-top:200%;
+    }
+    .adaptive:empty.jet-x {
+    background: url(http://www.jetotak.sk/img/jetx-demo.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    .adaptive:empty {
+        padding-top:80%;
+    }
+}
+@media (max-width: 420px) {
+    .adaptive:empty.jet-x {
+    background: url(http://www.jetotak.sk/img/jetx-demo.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.adaptive:empty {
+        padding-top:120%;
+    }
+}
+
+.adaptive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: unset;
+    max-height: 90vh;
+}
+
+.adaptive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+}
+
+
+
+.adaptive:empty::before {
+    content: '';
+    background-image: url(http://www.jetotak.sk/img/lets-play.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+    width: -webkit-fill-available;
+    background-size: 40%;
+    min-height: 100%;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    top: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+    filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+}
+
+@media (max-width: 800px) {
+    .adaptive:empty::before {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background-size: 40%;
+    }
+
+    25% {
+        background-size: 55%;
+    }
+
+    50% {
+        background-size: 40%;
+    }
+
+    75% {
+        background-size: 55%;
+    }
+
+    100% {
+        background-size: 40%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        background-size: 40%;
+    }
+
+    25% {
+        background-size: 55%;
+    }
+
+    50% {
+        background-size: 40%;
+    }
+
+    75% {
+        background-size: 55%;
+    }
+
+    100% {
+        background-size: 40%;
+    }
+}
+
+iframe {
+    height: 670px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgb(77, 92, 129);
+}
+
+@media (max-width: 1023px) {
+    iframe {
+        height: 570px;
+    }
+}
+
+@media (max-width: 882px) {
+    iframe {
+        height: 520px;
+    }
+}
+
+@media (max-width: 800px) {
+    iframe {
+        height: 470px;
+    }
+}
+
+@media (max-width: 745px) {
+    iframe {
+        height: 370px;
+    }
+}
+
+@media (max-width: 590px) {
+    iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 410px) {
+    iframe {
+        height: 220px;
+    }
+}
+
+@media (max-width: 368px) {
+    iframe {
+        height: 200px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+                        <div class="iframe">
+                          <div class="adaptive jet-x" id="playGame"></div>
+                        </div>
+<script>
+        document.getElementById('playGame').onclick = function include(url) {
+            var url = 'https://www.smartsoftgaming.com/GameDemo/JetX'
+            var iframe = document.createElement('iframe');
+            iframe.src = url;
+            document.getElementsByClassName('adaptive')[0].appendChild(iframe);
+            document.getElementById('playGame').onclick = null;};
+    </script>
+    <script>
+        function downloadJSAtOnload() {
+            setTimeout(downloadJSAtOnloadScript, 2000);
+        };
+        function downloadJSAtOnloadScript() {
+            var element = document.createElement("script");
+            document.body.appendChild(element);
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else
+            window.onload = downloadJSAtOnload;
+    </script>
+
+</body>
+</html>
