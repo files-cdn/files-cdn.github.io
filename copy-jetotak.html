@@ -40,7 +40,7 @@ html,body {
 
 /* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
 body {
-    color: #fbfbfc;
+    color: #212121;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -54,6 +54,14 @@ body {
     -o-transition: padding-bottom .4s ease-in-out;
     transition: padding-bottom .4s ease-in-out;
     }
+.p_s_h_h {height: 173px;width: 100%;text-align: center;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16); } 
+.h_h_l {width: 50%;height: 100%;position: relative;display: inline-block; } 
+.h_h_l_l .td-bc-logo {margin: auto;height: 50px;width: 170px;cursor: unset; } 
+.h_h_l_l {padding: 22px; } 
+.h_h_l_t {font-size: 16px;line-height: 22px; } 
+.h_h_l_s {font-weight: bold;font-size: 37px;line-height: 43px; } 
+.h_h_l .gift-icon-v2 {position: absolute;right: -34px;top: 46px;left: unset;border-radius: 50%;background-color: #b11433; } 
+.h_h_r {width: 50%;height: 100%;float: right;background-color: #2a2a2a; } 
 .h_h_r_bb {padding: 15px 15px 15px 50px; } 
 .h_h_r_t {font-size: 14px;line-height: 16px;color: #7b7b7b;text-align: left; } 
 .h_h_r_p {height: 50px;border: 2px dashed #fff;font-weight: bold;font-size: 18px;line-height: 22px;color: #fff;position: relative;margin: 14px 0; } 
@@ -61,6 +69,20 @@ body {
 .r_p_t {line-height: 45px; } 
 .h_h_r_p.click_block {cursor: pointer; } 
 .h_h_r_b {line-height: 50px;height: 50px;font-size: 18px; } 
+.psb_d_b_1xs div {opacity: 0.5;margin-top: 5px; } 
+.p_s_b_duo_bk > div {display: table-cell;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);height: 43px; } 
+.promo_single_body {display: table;margin: 20px 0; } 
+.p_s_b_duo_bk {display: table-cell;vertical-align: top; } 
+.p_s_b_text {display: table-cell; } 
+.psb_d_b_1xs:nth-child(1) {border-right: 1px solid #636363; } 
+.p_s_b_text_t {padding-left: 20px; } 
+@media (max-width: 800px) {.h_h_l,
+.h_h_r {width: 100%;float: unset;height: 173px; } 
+.p_s_h_h {height: unset; } 
+.h_h_r_bb {padding: 15px; } 
+.h_h_l .gift-icon-v2 {top: 134px;right: 15px; } 
+.promo_single_body > div {display: block; } 
+.p_s_b_text_t{padding:20px 0}} 
 .like-green-link {
     padding-left: 10px;
     display: block;
@@ -78,12 +100,36 @@ body {
     text-decoration: none;
     margin: 0;
 }
+.tab_content {margin-bottom: 1rem;}
+.back_to_top {position: fixed;bottom: 80px;right: 40px;z-index: 9999;width: 30px;height: 30px;text-align: center;line-height: 30px;background: #de2953;color: #fff;cursor: pointer;border-radius: 2px;display: none;}
+.back_to_top:hover {background: #d0d0d0;color:#de2953;text-decoration: none;}
+.back_to_top-show {display: block;text-decoration: none;}
+
+.table-width {width: 70%}
+@media (max-width:800px) {.table-width {width: 100%}}
+/*.std-table tr td:first-child {text-align: center;font-weight: 600;}*/
+.modal_promocode_copy > div {height: 100%;overflow: hidden;}
 </style>
 
 </head>
 <body>
 
                    
+                <div class="tab_content">
+                  <div class="promo_single_head tab_item">
+                    <div class="p_s_h_h">
+                      <div class="h_h_l">
+                        <div class="h_h_l_l">
+                          <div class="td-bc-logo skip_lazy">
+                            <img src="http://www.jetotak.sk/img/logo2.svg" alt="JetX" title="JetX" width="158"
+                            height="64" layout="intrinsic">
+                          </div>
+                        </div>
+                        <div class="h_h_l_t">Promosyon kodu:</div>
+                        <div class="h_h_l_s">100 TRY</div>
+                        <div class="gift-icon-v2" style="background-color:  #b11433"><br></div>
+                      </div>
+                      <div class="h_h_r">
                         <div class="h_h_r_bb">
                           <div class="h_h_r_t">Promosyon kodunu kopyalayın:</div>
                           <div class="h_h_r_p click_block">
@@ -92,7 +138,11 @@ body {
                           </div>
                           <a id="cupon_button" data-target-copy-id="cupon"
                           class="h_h_r_b like-green-link"> PROMOSYON KODUNU KOPYALA </a>
-                        </div>
+                        </div>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
 <script>
