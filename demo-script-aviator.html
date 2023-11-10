@@ -6,11 +6,6 @@
 <title>DEMO</title>
 
 <style>
-/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
-/* * {
-  box-sizing: border-box;
-} */
-
 html,body {
   overflow: hidden;
   width: 100%;
@@ -20,103 +15,54 @@ html,body {
   font-family: Sans-Serif;
 }
 
-/* ↓ Стили для настройки цвета копирования ↓ */
-::selection {
-  background: #fcb514;
-  color: #000;
-}
-
-::-moz-selection {
-  background: #fcb514;
-  color: #000;
-}
-
-::-webkit-selection {
-  background: #fcb514;
-  color: #000;
-}
-
-
-
-/* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
-body {
-    color: #fbfbfc;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 100vh;
-    background: inherit;
-    -webkit-transition: padding-bottom .4s ease-in-out;
-    -o-transition: padding-bottom .4s ease-in-out;
-    transition: padding-bottom .4s ease-in-out;
-    }
 .iframe {
-    width: 100%;
-    max-width: 1190px;
-    max-height: 670px;
+
+    max-width:100%;
+    max-height: 100%;
     margin: 0 auto;
-    margin-bottom: 35px;
+
 }
 #playGame {
     width: inherit;
-    margin: .7rem auto;
+
+}
+
+.adaptive:empty.demo {
+    background: url(https://files-cdn.github.io/aviator-spribe.webp) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width:100%;
 }
 .adaptive:empty {
     max-width: 100%;
-    padding-top: 52%;
-    margin-top: 1.5rem;
-}
 
-.adaptive:empty.aviator-spribe {
-    background: url(https://files-cdn.github.io/aviator-spribe.png) center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
-
-.adaptive.aviator-spribe {
-    padding-top: 42%;
-}
-
-@media (min-width: 920px) {
-    .adaptive:empty {
-        padding-top:52%;
-    }
-}
-
-@media (max-width: 800px) {
-    .adaptive.aviator-spribe {
-        padding-top:50%;
-    }
-}
-
-@media (max-width: 600px) {
-    .adaptive.aviator-spribe {
-        padding-top:200%;
-    }
-    .adaptive:empty.aviator-spribe {
-    background: url(https://files-cdn.github.io/demo-tablet.webp) center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-    .adaptive:empty {
-        padding-top:80%;
-    }
-}
-@media (max-width: 420px) {
-    .adaptive:empty.aviator-spribe {
-    background: url(https://files-cdn.github.io/demo-mob.webp) center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+@media (min-width: 920px){
 .adaptive:empty {
-        padding-top:120%;
-    }
+    padding-top: 52%;
+}}
+.adaptive.demo {
+    padding-top: 55%;
 }
+ @media (max-width: 800px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 95%;
+}}
+@media (max-width: 600px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 125%;
+}}
+@media (max-width: 420px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 140%;
+}}
+.adaptive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 
+    max-width: 100%;
+}
 .adaptive iframe {
     position: absolute;
     top: 0;
@@ -126,21 +72,14 @@ body {
     width: 100%;
     height: 100%;
     border: unset;
-    max-height: 90vh;
-}
 
-.adaptive {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 75%;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    max-width: 100%;
 }
 
 
-
+:active, :hover, :focus {
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
 .adaptive:empty::before {
     content: '';
     background-image: url(https://files-cdn.github.io/lets-play.png);
@@ -167,112 +106,25 @@ body {
     -webkit-filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
     filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
 }
-
-@media (max-width: 800px) {
-    .adaptive:empty::before {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        background-size: 40%;
-    }
-
-    25% {
-        background-size: 55%;
-    }
-
-    50% {
-        background-size: 40%;
-    }
-
-    75% {
-        background-size: 55%;
-    }
-
-    100% {
-        background-size: 40%;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        background-size: 40%;
-    }
-
-    25% {
-        background-size: 55%;
-    }
-
-    50% {
-        background-size: 40%;
-    }
-
-    75% {
-        background-size: 55%;
-    }
-
-    100% {
-        background-size: 40%;
-    }
-}
-
-iframe {
-    height: 670px;
-    width: 100%;
-    box-shadow: 0 2px 10px rgb(77, 92, 129);
-}
-
-@media (max-width: 1023px) {
-    iframe {
-        height: 570px;
-    }
-}
-
-@media (max-width: 882px) {
-    iframe {
-        height: 520px;
-    }
-}
-
-@media (max-width: 800px) {
-    iframe {
-        height: 470px;
-    }
-}
-
-@media (max-width: 745px) {
-    iframe {
-        height: 370px;
-    }
-}
-
-@media (max-width: 590px) {
-    iframe {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    iframe {
-        height: 250px;
-    }
-}
-
-@media (max-width: 410px) {
-    iframe {
-        height: 220px;
-    }
-}
-
-@media (max-width: 368px) {
-    iframe {
-        height: 200px;
-    }
-}
+@media (max-width: 800px){
+.adaptive:empty::before {
+    margin-left: 50px;
+    margin-right: 50px;
+}}
+@-webkit-keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+  @keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
 
 </style>
 
@@ -280,7 +132,7 @@ iframe {
 <body>
 
                         <div class="iframe">
-                          <div class="adaptive aviator-spribe" id="playGame"></div>
+                          <div class="adaptive demo" id="playGame"></div>
                         </div>
 <script>
         document.getElementById('playGame').onclick = function include(url) {
