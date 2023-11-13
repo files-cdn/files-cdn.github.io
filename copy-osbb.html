@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Copier</title>
+
+<style>
+/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* ↓ Стили для настройки цвета копирования ↓ */
+::selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+
+
+/* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
+body {
+    color: #fbfbfc;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    background: inherit;
+    -webkit-transition: padding-bottom .4s ease-in-out;
+    -o-transition: padding-bottom .4s ease-in-out;
+    transition: padding-bottom .4s ease-in-out;
+    }
+.pm-code-wrp{margin:0;text-align:center;position:relative;display:flex;margin-bottom:15px;align-items:center;justify-content:center;}
+.pm-code-wrp .code-blk{border-radius:2px 0 0 2px;background:#e9e9e9;font-size:24px;font-weight:500;text-align:center;white-space:nowrap;width:90%;height:45px;line-height:45px;color:#000;border:1px solid #d9d9d9;outline:none;}
+.pm-code-wrp .copy-btn-bonus{width:55px;height:45px;border:none;display:inline-block;vertical-align:top;border-radius:0 2px 2px 0;outline:none;cursor:pointer;background-color:#202973;box-shadow:0 0 3px #000000;order:2;}
+.pm-code-wrp .copy-btn-bonus .copy-icon{display:inline-block;width:25px;height:25px;position:relative;top:1px;left:1px;}
+.pm-code-wrp .copy-btn-bonus .copy-icon{background:url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="svg-icon-copy"><path d="M20 1.25H5a2.507 2.507 0 00-2.5 2.5v17.5H5V3.75h15v-2.5z"></path><path d="M10 8.75v17.5h13.75V8.75H10zm0-2.5h13.75a2.5 2.5 0 012.5 2.5v17.5a2.5 2.5 0 01-2.5 2.5H10a2.5 2.5 0 01-2.5-2.5V8.75a2.5 2.5 0 012.5-2.5z"></path></svg>') no-repeat;}
+.pm-code-wrp .copy-btn-bonus.copied{background:#000;}
+.tooltiptext{position:absolute;display:inline-block;background:#358e39;color:#fff;text-shadow:0 0 0 #fff;box-shadow:0 1px 4px 0 #358e39;text-align:center;padding:9px;border-radius:6px;z-index:9;transition:opacity .6s;font-size:14px;bottom:-32px;letter-spacing:1px;margin-right:52px;}
+.tooltiptext::after{content:"";position:absolute;bottom:100%;left:50%;margin-left:-3px;border-width:5px;border-style:solid;border-color:transparent transparent #358e39 transparent;}
+
+</style>
+
+</head>
+<body>
+
+                    <div class="pm-code-wrp">
+                    <button class="copy-btn-bonus" title="Скопировать код"><span class="copy-icon"></span></button>
+                    <input readonly value="PMC777" class="code-blk">
+                  </div> 
+
+
+<script>
+            window.onload = function(){
+// promocode copy
+var button = document.getElementsByClassName("copy-btn-bonus");
+var tooltip = '<span class="tooltiptext">\u0421\u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043E</span>';
+for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", function(){
+    document.execCommand('copy', false, this.nextElementSibling.select());
+    this.parentElement.insertAdjacentHTML('beforeend', tooltip);
+    this.classList.add("copied");
+      setTimeout(function() {
+        document.getElementsByClassName("tooltiptext")[0].remove();
+      }, 4000);
+    })
+}
+}
+</script>
+
+</body>
+</html>
