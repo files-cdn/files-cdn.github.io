@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DEMO</title>
+
+<style>
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+#playGame {
+    width: inherit;
+    margin: .7rem auto;
+}
+
+.adaptive:empty.aviator-spribe {
+    background: url(https://files-cdn.github.io/crazy-monkey-demo.webp) center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.adaptive.demo {
+    padding-top: 60%;
+}
+  
+.adaptive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: unset;
+    max-height: 140vh;
+}
+
+.adaptive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+}
+
+.adaptive:empty {
+    max-width: 100%;
+    padding-top: 60%;
+    margin-top: 1.5rem;
+}
+
+  @media (min-width: 920px){
+.adaptive:empty {
+    padding-top: 52%;
+}}
+.adaptive.demo {
+    padding-top: 55%;
+}
+ @media (max-width: 800px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 95%;
+}
+ }
+@media (max-width: 600px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 125%;
+}}
+@media (max-width: 420px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 140%;
+}
+}
+
+.adaptive:empty::before {
+    content: '';
+    background-image: url(https://files-cdn.github.io/button-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    background-size: 40%;
+    min-height: 100%;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    top: 0;
+    left: calc(50% - 150px);
+
+}
+
+@media (max-width: 600px) {
+    .adaptive:empty::before {
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+}
+</style>
+
+</head>
+<body>
+
+                        <div class="iframe">
+                          <div class="adaptive demo aviator-spribe" id="playGame"></div>
+                        </div>
+<script>
+        document.getElementById('playGame').onclick = function include(url) {
+            var url = 'https://www.igrosoft.ru/local/tools/open_game.php?gid=320&language=en'
+            var iframe = document.createElement('iframe');
+            iframe.src = url;
+            document.getElementsByClassName('adaptive')[0].appendChild(iframe);
+            document.getElementById('playGame').onclick = null;};
+    </script>
+
+</body>
+</html>
