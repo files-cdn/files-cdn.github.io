@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DEMO</title>
+
+<style>
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+.iframe {
+
+    max-width:100%;
+    max-height: 100%;
+    margin: 0 auto;
+
+}
+#playGame {
+    width: inherit;
+
+}
+
+.adaptive:empty.demo {
+    background: url(https://files-cdn.github.io/aviator-demo.webp) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width:100%;
+}
+.adaptive:empty {
+    max-width: 100%;
+
+}
+@media (min-width: 920px){
+.adaptive:empty {
+    padding-top: 52%;
+}}
+.adaptive.demo {
+    padding-top: 55%;
+}
+ @media (max-width: 800px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 95%;
+}
+ .adaptive:empty.demo {
+    background: url(https://files-cdn.github.io/demo-tablet.webp) center;
+ }
+ }
+@media (max-width: 600px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 125%;
+}}
+@media (max-width: 420px){
+.adaptive:empty, .adaptive.demo {
+    padding-top: 140%;
+}
+ .adaptive:empty.demo {
+    background: url(https://files-cdn.github.io/demo-mob.webp) center;
+ }
+}
+.adaptive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    max-width: 100%;
+}
+.adaptive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: unset;
+
+}
+
+
+:active, :hover, :focus {
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+.adaptive:empty::before {
+    content: '';
+    background-image: url(https://files-cdn.github.io/btn-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+    width: -webkit-fill-available;
+    background-size: 40%;
+    min-height: 100%;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    top: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+    filter: hue-rotate(228deg) drop-shadow(0px 0px 1.5rem white);
+}
+@media (max-width: 800px){
+.adaptive:empty::before {
+    margin-left: 50px;
+    margin-right: 50px;
+}}
+@-webkit-keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+  @keyframes pulse{
+    0%{background-size: 40%;}
+    25%{background-size: 55%;}
+    50%{background-size: 40%;}
+    75%{background-size: 55%;}
+    100%{background-size: 40%;}
+  }
+
+</style>
+
+</head>
+<body>
+
+                        <div class="iframe">
+                          <div class="adaptive demo" id="playGame"></div>
+                        </div>
+<script>
+        document.getElementById('playGame').onclick = function include(url) {
+            var url = 'https://demo.spribe.io/launch/aviator?currency=USD&lang=EN'
+            var iframe = document.createElement('iframe');
+            iframe.src = url;
+            document.getElementsByClassName('adaptive')[0].appendChild(iframe);
+            document.getElementById('playGame').onclick = null;};
+    </script>
+
+</body>
+</html>
