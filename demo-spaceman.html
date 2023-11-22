@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DEMO</title>
+
+<style>
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+ .iframe_thumbnail{
+     position:relative;
+}
+.play-btn{
+     position:absolute;
+     top:50%;
+     left:50%;
+     width:150px;
+     height:150px;
+     transform: translate(-50%, -50%);
+     z-index:99999;
+}
+ .play-btn-container span{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-57%, -50%);
+     z-index: 999199;
+     text-align: center;
+     font-size: 35px;
+     font-weight: bold;
+     color:white;
+}
+ .amp-iframe-layout{
+     width: 100vw;
+     height:100%;
+     position:relative;
+}
+ .amp-iframe-layout iframe{
+    height: 100%;
+     width:100%;
+}
+ .iframe_container .close-btn{
+     position: absolute;
+     right: 20px;
+     top: 20px;
+     background: #68f;
+     color: white;
+     border: solid 1px white;
+     padding: 1px 9px;
+     border-radius: 25px;
+     font-size: 18px;
+     z-index:999999999999;
+     box-shadow:1px 0 25px rgba(0, 0, 0, 25px) 
+}
+ .iframe_container{
+     display:none;
+}
+ @media (max-width: 520px) {
+     .play-btn{
+         width:75px;
+         height:75px;
+    }
+     .play-btn-container span{
+         font-size:18px;
+    }
+     .amp-iframe-layout{
+         height:100%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+                        <div class="fl-rich-text">
+                                    <div id="mainIframeThumb" class="iframe_thumbnail" role="button" tabindex="-1" on="tap:mainIframeContainer.show, mainIframeThumb.hide">
+                                      <div class="play-btn-container" role="button" tabindex="-1" style="cursor:pointer" onclick="document.querySelector('.iframe_container').style.display = 'flex';"><span>OYNA</span> <img decoding="async" src="https://files-cdn.github.io/play.png" width="40" height="40" class="play-btn" alt="Play button">
+                                      </div>
+                                      <img fetchpriority="high" decoding="async" height="340" width="650" style="filter:blur(8px)" alt="iFrame Thumbnail Image" src="https://files-cdn.github.io/spaceman-demo.webp">
+                                    </div>
+                                    <div class="iframe_container" id="mainIframeContainer" hidden="">
+                                      <div onclick="document.querySelector('.iframe_container').style.display='none'" class="close-btn" role="button" style="cursor: pointer;" tabindex="-1">
+                                        X
+                                      </div>
+                                      <div class="amp-iframe-layout">
+                                        <iframe loadig="lazy" sandbox="allow-scripts allow-same-origin allow-popups" src="https://prelive-gs1.pragmaticplaylive.net/api/spacemanDemo"></iframe>
+                                      </div>
+                                    </div>
+                                  </div>
+
+</body>
+</html>
