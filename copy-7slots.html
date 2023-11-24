@@ -196,13 +196,11 @@ background: #f4f5f7;
       }
   }
 }
-var codeElement = document.getElementById('code');
-var textBefore = codeElement.getAttribute('data-text-before');
-var textPromo = codeElement.getAttribute('data-text-promo');
 var promoTooltip = document.querySelector('.promo-tooltip');
 copy.onclick = function () {
   selectText(this.dataset.targetCopyId);  
   setTimeout(() => document.execCommand("copy"));
+  setTimeout(() => document.execCommand("copy"), 100);
   this.classList.add('copied');
   setTimeout(() => promoTooltip.classList.add('open'));
   setTimeout(() => promoTooltip.classList.remove('open'), 1000);
