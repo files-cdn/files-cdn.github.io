@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>DEMO</title>
+
+    <style>
+        html,body {
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          font-family: Sans-Serif;
+      }
+      .promo_code-block {
+    margin-left: 22px;
+    width: 102px;
+    height: 38px;
+}
+.promo_code-block {
+    border-radius: 12px;
+    position: relative;
+    background: #f4f5f7;
+    border: 1px solid #f1f1f1;
+    text-align: right;
+    min-height: 36px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+   /* overflow: hidden;*/
+}
+.promo_code-block.copied {
+    justify-content: center;
+}
+.promo_code-block:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    width: 8px;
+    height: 100%;
+    background: #f4f5f7;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    z-index: 1;
+}
+.promo_code-block .promo_code-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #5554de;
+    font-size: 13px;
+    line-height: 17px;
+    /*padding: 0 16px;*/
+    border-radius: 12px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    height: 100%;
+    max-width: 76px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    z-index: 2;
+}
+.promo_code-block.copied .promo_code-bg {
+    display: none;
+}
+.promo_code-block .promo_code-text-wrapper {
+    width: 100%;
+    padding: 0 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+.promo_code-block .promo_code-text-wrapper.unsetAnimation {
+    animation: unset;
+}
+.promo_code-block.copied .promo_code-text-wrapper {
+    justify-content: center;
+}
+.promo_code-block .promo_code-text {
+    color: #5554de;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+.promo_code-block.copied .promo_code-text {
+    position: relative;
+    text-align: center;
+}
+.promo_code-block .promo_code-copied svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 6px;
+}
+.promo_code-block:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-flex;
+    width: 8px;
+    height: 100%;
+    background: #f4f5f7;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 1;
+}
+::after, ::before {
+    box-sizing: border-box;
+}
+.promo_code-block .promo_code-copied {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f4f5f7;
+    border: 1px solid #f1f1f1;
+    height: 34px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #5554de;
+    transition: 0.2s;
+}
+#code::selection {
+background: #f4f5f7;
+}
+.promo-tooltip {
+  display: none;
+}
+.promo-tooltip.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 35px;
+  font-weight: 600;
+    font-size: 12px;
+  background-color: #f4f5f7;
+  border: 1px solid #f1f1f1;
+  color: #5554de;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 35px;
+}
+.promo_code-bg:before {
+    content: attr(data-text-before);
+}
+  </style>
+
+</head>
+<body>
+
+    <div id="copy" data-target-copy-id="code" class="promo_code-block" bis_skin_checked="1">
+        <span class="promo_code-bg" data-text-before="Reveal"></span>
+        <div class="promo_code-text-wrapper unsetAnimation" bis_skin_checked="1">
+            <span id="code" class="promo_code-text" style="animation: unset;" data-text-promo="SLOTS">SLOTS</span>
+        </div>
+        <div class="promo-tooltip">Copied!</div>
+    </div>
+    <script type="text/javascript">
+        function selectText(id) {
+          var sel, range;
+          var el = document.getElementById(id);
+          if (window.getSelection && document.createRange) {
+            sel = window.getSelection();
+            if (sel.toString() == '') {
+              window.setTimeout(function () {
+                range = document.createRange();
+                range.selectNodeContents(el);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }, 1);
+          }
+      } else if (document.selection) {
+        sel = document.selection.createRange();
+        if (sel.text == '') {
+          range = document.body.createTextRange();
+          range.moveToElementText(el);
+          range.select();
+      }
+  }
+}
+var codeElement = document.getElementById('code');
+var textBefore = codeElement.getAttribute('data-text-before');
+var textPromo = codeElement.getAttribute('data-text-promo');
+var promoTooltip = document.querySelector('.promo-tooltip');
+copy.onclick = function () {
+  selectText(this.dataset.targetCopyId);  
+  setTimeout(() => document.execCommand("copy"));
+  this.classList.add('copied');
+  setTimeout(() => promoTooltip.classList.add('open'));
+  setTimeout(() => promoTooltip.classList.remove('open'), 1000);
+}
+</script>
+
+</body>
+</html>
