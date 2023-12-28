@@ -101,7 +101,7 @@ body {
 <div class="casino__btn">
   <span class="casino__bonus">🔥+500%🔥</span>
   <span class="casino__bonus border-promo" id="1win_code">BOOST1WIN</span>                     
-  <button class="referral button button-w" id="win_btn" data-target-copy-id="1win_code">Promo kodunu kopyalayın</button>
+  <button class="referral button button-w" id="win_btn" data-target-copy-id="1win_code">Promo-kodni nusxalash</button>
 </div>
 
 
@@ -112,10 +112,10 @@ body {
          function selectText(id) { var sel, range; var el = document.getElementById(id); if (window.getSelection && document.createRange) { sel = window.getSelection(); if (sel.toString() == '') { window.setTimeout(function () { range = document.createRange(); range.selectNodeContents(el); sel.removeAllRanges(); sel.addRange(range); }, 1); } } else if (document.selection) { sel = document.selection.createRange(); if (sel.text == '') { range = document.body.createTextRange(); range.moveToElementText(el); range.select(); } } }
          win_btn.onclick = function () {
             selectText(this.dataset.targetCopyId);
-            this.innerText = 'Promo kod kopyalandı';
+            this.innerText = 'Promo-kod nusxalandi';
             setTimeout(() => document.execCommand("copy"));
             setTimeout(() => document.execCommand("copy"), 100);
-            setTimeout(() => this.innerText = 'Promo kodu kopyala', 5000);
+            setTimeout(() => this.innerText = 'Promo-kod nusxalandi', 5000);
          }
       </script>
 
