@@ -1,0 +1,61 @@
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Nazwa kasyna (Polska)</strong></td>
+      <td><strong>Gry na stronie</strong></td>
+      <td><strong>Jakość usług wsparcia</strong></td>
+      <td><strong>Wygodna wpłata i wypłata</strong></td>
+      <td><strong>Rejestracja</strong></td>
+    </tr>
+    <tr>
+      <td>BetOnRed</td>
+      <td>5.0</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>Vulkan Vegas</td>
+      <td>3.0</td>
+      <td>1.8</td>
+      <td>2.5</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>Hotslots.io</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>Wazamba Casino</td>
+      <td>1.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>3.0</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<style>
+  table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  table tbody {
+    display: block;
+    width: 100%;
+}
+table td {
+	width: 100%;
+	padding: 13px 10px;
+  border: 1px solid #dedede;
+}
+
+</style>
