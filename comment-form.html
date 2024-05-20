@@ -395,6 +395,10 @@
       </style>
    </head>
    <body>
+ <div class="comment-container">
+      <div class="wrapp_comments">
+         <h2 id="rəylər">📣 Κριτικές</h2>
+      </div>
       <form id="forms" class="comment-form row" method="POST">
          <div class="col-lg-12">
             <h4>Γράψε ένα σχόλιο:</h4>
@@ -420,26 +424,28 @@
                </p>
             </div>
          </div>
-         <script>
-            const form = document.getElementById("forms");
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
-            });
-            var modal = document.getElementById("myModal");
-            var btn = document.getElementById("MBtn");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function () {
-                modal.style.display = "block";
-            };
-            span.onclick = function () {
-                modal.style.display = "none";
-            };
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            };
-         </script>
+         
       </form>
+      </div>
+       <script>
+                              const form = document.getElementById("forms");
+                              form.addEventListener("submit", function (event) {
+                                  event.preventDefault();
+                              });
+                              var modal = document.getElementById("myModal");
+                              var btn = document.getElementById("MBtn");
+                              var span = document.getElementsByClassName("close")[0];
+                              btn.onclick = function () {
+                                  modal.style.display = "block";
+                              };
+                              span.onclick = function () {
+                                  modal.style.display = "none";
+                              };
+                              window.onclick = function (event) {
+                                  if (event.target == modal) {
+                                      modal.style.display = "none";
+                                  }
+                              };
+                           </script>
    </body>
 </html>
