@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Copier</title>
+<style>
+    html {
+    font-family: sans-serif;
+}
+.lwptoc_i {
+    background-color: #171725;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px #000;
+}
+.h_h_r_t{
+  color: #fff;
+  font-size: 18px;
+}
+.h_h_rr {
+  margin-bottom:20px;
+}
+.h_h_r_bb {
+  padding: 15px;
+  text-align: center;
+}
+.h_h_r_p.click_block {
+  cursor: pointer;
+}
+.h_h_r_p {
+  height: 35px;
+  border: 2px dashed #fff;
+  border-radius: 100px;
+  background-color: #2a2a2a;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  position: relative;
+  margin: 14px 0;
+}
+.r_p_t {
+  line-height: 38px;
+}
+.r_p_i {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+}
+.like-green-link {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-radius: 100px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #fe284a;
+  box-shadow: 0 3px 0 0#871628,0 4px 4px 0#000;
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.like-green-link:hover {
+  transform: translateY(2px);
+  -webkit-box-shadow: 0 1px 0 0#871628,0 4px 4px 0#000,inset 0 15px 15px -3px rgba(255,255,255,.4);
+  box-shadow: 0 1px 0 0#871628,0 4px 4px 0#000,inset 0 15px 15px -3px rgba(255,255,255,.4);
+  transition: all ease-out .2s;
+}
+</style>
+</head>
+  <body>
+<div class="lwptoc_i h_h_rr">
+  <div class="h_h_r_bb">
+    <div class="h_h_r_t">
+      <b class="lwptoc_title">До 100% на первый депозит + 100 фриспинов</b>
+    </div>
+    <div class="h_h_r_p click_block">
+      <div id="cupon" class="r_p_t">VAVADAKZ</div>
+      <div class="r_p_i"><br></div>
+    </div>
+    <a id="cupon_button" data-target-copy-id="cupon" class="h_h_r_b like-green-link">
+      КОПИРОВАТЬ ПРОМОКОД </a>
+    <a href="https://trafficmining.net/SX7MfH?subid1=birgemiz2020.kz" rel="nofollow" class="h_h_r_b like-green-link" target="_blank">ЗЕРКАЛО ВАВАДА</a>
+  </div>
+</div>
+</body>
+<script>
+  function selectText(id) {
+    var sel, range;
+    var el = document.getElementById(id);
+    if (window.getSelection && document.createRange) {
+      sel = window.getSelection();
+      if (sel.toString() == '') {
+        window.setTimeout(function () {
+          range = document.createRange();
+          range.selectNodeContents(el);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }, 1);
+      }
+    } else if (document.selection) {
+      sel = document.selection.createRange();
+      if (sel.text == '') {
+        range = document.body.createTextRange();
+        range.moveToElementText(el);
+        range.select();
+      }
+    }
+  }
+  cupon_button.onclick = function () {
+    selectText(this.dataset.targetCopyId);
+    this.innerText = 'ПРОМОКОД СКОПИРОВАН';
+    setTimeout(() => document.execCommand("copy"));
+    setTimeout(() => document.execCommand("copy"), 100);
+    setTimeout(() => this.innerText = 'КОПИРОВАТЬ ПРОМОКОД', 5000);
+  }
+</script>
