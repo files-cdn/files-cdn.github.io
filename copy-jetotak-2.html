@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Copier</title>
+
+<style>
+/* ↓ Стили для отключения скроллбаров в amp-iframe ↓ */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* ↓ Стили для настройки цвета копирования ↓ */
+::selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+::-webkit-selection {
+  background: #fcb514;
+  color: #000;
+}
+
+
+
+/* ↓ Стили для блока "контейнера" куда входит блок с промокодом и кнопка ↓ */
+body {
+    color: #212121;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    background: inherit;
+    -webkit-transition: padding-bottom .4s ease-in-out;
+    -o-transition: padding-bottom .4s ease-in-out;
+    transition: padding-bottom .4s ease-in-out;
+    }
+.p_s_h_h {height: 173px;width: 100%;text-align: center;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16); } 
+.h_h_l {width: 50%;height: 100%;position: relative;display: inline-block; } 
+.h_h_l_l .td-bc-logo {margin: auto;height: 50px;width: 170px;cursor: unset; } 
+.h_h_l_l {padding: 22px; } 
+.h_h_l_t {font-size: 16px;line-height: 22px; } 
+.h_h_l_s {font-weight: bold;font-size: 37px;line-height: 43px; } 
+.h_h_l .gift-icon-v2 {position: absolute;right: -34px;top: 46px;left: unset;border-radius: 50%;background-color: #b11433; } 
+.h_h_r {width: 50%;height: 100%;display:inline-block;background-color: #2a2a2a;float:right; } 
+.h_h_r_bb {padding: 15px 15px 15px 50px; } 
+.h_h_r_t {font-size: 14px;line-height: 16px;color: #7b7b7b;text-align: left; } 
+.h_h_r_p {height: 50px;border: 2px dashed #fff;font-weight: bold;font-size: 18px;line-height: 22px;color: #fff;position: relative;margin: 14px 0; } 
+.r_p_i {position: absolute;top: 13px;right: 10px; } 
+.r_p_t {line-height: 45px; } 
+.h_h_r_p.click_block {cursor: pointer; } 
+.h_h_r_b {line-height: 50px;height: 50px;font-size: 18px; } 
+.psb_d_b_1xs div {opacity: 0.5;margin-top: 5px; } 
+.p_s_b_duo_bk > div {display: table-cell;box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);height: 43px; } 
+.promo_single_body {display: table;margin: 20px 0; } 
+.p_s_b_duo_bk {display: table-cell;vertical-align: top; } 
+.p_s_b_text {display: table-cell; } 
+.psb_d_b_1xs:nth-child(1) {border-right: 1px solid #636363; } 
+.p_s_b_text_t {padding-left: 20px; } 
+@media (max-width: 800px) {.h_h_l,
+.h_h_r {width: 100%;float: unset;height: 173px; } 
+.p_s_h_h {height: unset; } 
+.h_h_r_bb {padding: 15px; } 
+.h_h_l .gift-icon-v2 {top: 134px;right: 15px; } 
+.promo_single_body > div {display: block; } 
+.p_s_b_text_t{padding:20px 0}} 
+.like-green-link {
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #de2953;
+    border-bottom: 2px solid #E4063A;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin: 0;
+        box-sizing: border-box;
+}
+.tab_content {margin-bottom: 1rem;}
+.back_to_top {position: fixed;bottom: 80px;right: 40px;z-index: 9999;width: 30px;height: 30px;text-align: center;line-height: 30px;background: #de2953;color: #fff;cursor: pointer;border-radius: 2px;display: none;}
+.back_to_top:hover {background: #d0d0d0;color:#de2953;text-decoration: none;}
+.back_to_top-show {display: block;text-decoration: none;}
+
+.table-width {width: 70%}
+@media (max-width:800px) {.table-width {width: 100%}}
+/*.std-table tr td:first-child {text-align: center;font-weight: 600;}*/
+.modal_promocode_copy > div {height: 100%;overflow: hidden;}
+.gift-icon-v2 {
+    width: 68px;
+    height: 68px;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.4);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAMAAAAPzWOAAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURUdwTCkpKSoqKikpKSgoKCAgICkpKSkpKSgoKCoqKikpKSoqKikpKSkpKTAwMCkpKSoqKioqKikpKSoqKkjqAdIAAAATdFJOUwBw78JAEN+gIGCvgJBQELAwf2/9NpgyAAAA90lEQVRYw+3W6Q6DIAwA4IoUEO/t/d911Io74tElbtmS9scChH5iq3FwPSFAEUUUUWQTKVsEGGqX56axCGj9G4ixwBHmrDLkBSdFTE5JUdOCv89XlTWk4O2YFTaQaStDHO29mJQ8pXlHGjbphCPNSxFCFx6YI6WjH+TUKg0LEUJ308yHwrkUked9GrZiJPcysjHmzq8XZQVpHndORV4uLr8ds7R2bvfSVi8rbN1ay09asBzhaUiHTOH3kAKEUewgUgO6MxBQ5PsIntHiWAmj/JNPRh+eI24u7iD+pYJ+c1ERRX4BMRLEHb2AMRwh6PV/rCKKKPIp5AYFEAuNWlyhtAAAAABJRU5ErkJggg==);
+    }
+    .mb-3 {
+    margin-bottom: 1rem;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.h_h_r_bb.mono-btn {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.promo_single_head, .p_s_b_duo_bk .tab {
+  display: block;
+    border: solid 1px rgba(0, 0, 0, .2);
+  }
+  .col-xs-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  .text-block {
+    max-width: 100%;
+}
+.promo_code_block {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+.promo_code_block .promo_first_block {
+    /* height: 100px; */
+    width: 33.3333%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 15px;
+}
+.block_1 {
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 15%);
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}
+.block_3 {
+    background: #2a2a2a;
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 15%);
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}
+.promo_first_block.block_1 img {
+    max-width: 160px;
+    height: auto;
+}
+.promo_first_block p.promo_first_block_brand_title {
+    position: static;
+    margin-right: 0;
+    transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #727272;
+}
+.modal_promo_promocode_block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 33.333%;
+    height: fit-content;
+    background-color: #2a2a2a;
+}
+.modal_promo_promocode_block .modal_promocode {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px dashed #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(255 255 255);
+    width: 100%;
+}
+.modal_promo_promocode_block .modal_promocode_copy {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #de2953;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.modal_promocode_copy > div {
+    height: 100%;
+    overflow: hidden;
+}
+.modal_pp-link {
+    color: white;
+    text-decoration: blink;
+    height: 50px;
+    line-height: 50px;
+    width: 90%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    align-items: center;
+    font-weight: bold;
+}
+@media (min-width: 995px) {
+    .modal_pp-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.modal_pp {
+    width: 100%;
+    background: #de2953;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
+
+                   
+                <div class="wrapper">
+
+                <div class="tab_content">
+                  <div class="promo_single_head tab_item">
+                    <div class="p_s_h_h">
+                      <div class="h_h_l">
+                        <div class="h_h_l_l">
+                          <div class="td-bc-logo skip_lazy">
+                            <img src="http://www.jetotak.sk/img/logo2.svg" alt="JetX" title="JetX" width="158"
+                            height="64" layout="intrinsic">
+                          </div>
+                        </div>
+                        <div class="h_h_l_t">Promosyon kodu:</div>
+                        <div class="h_h_l_s">100 TRY</div>
+                        <div class="gift-icon-v2" style="background-color:  #b11433"><br></div>
+                      </div>
+                      
+                      <div class="h_h_r">
+                        <div class="h_h_r_bb mono-btn">
+                          <a href="https://trafficmining.net/T7Pgth?subid1=jetotak.sk" target="_blank" rel="nofollow" title="JetX'e giriş yapın" class="h_h_r_b like-green-link">Oynamak</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div class="tabs">                
+                  <div class="promo_single_body">
+
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-xs-12">
+                  <div class="text-block single-text">
+                    <div>
+                      <div class="promo_code_block">
+                        <div class="promo_first_block block_1" id="promo_1">
+                          <img src="http://www.jetotak.sk/img/1xbet-logo.svg" alt="1Xbet" width="300" height="66">
+                          <p class="promo_first_block_brand_title">1Xbet</p>
+                        </div>
+                        <div class="modal_promo_promocode_block">
+                          <div id="modal_promocode_1" class="modal_promocode">X2BEST</div>
+                          <div class="modal_promocode_copy">
+                            <div id="modal_promocode_copy_1"
+                              data-target-copy-id="modal_promocode_1">Promosyon kodunu kopyalayın
+                            </div>
+                          </div>
+                        </div>
+                        <div class="promo_first_block block_3" id="promo_1">
+                          <a href="https://trafficmining.net/ZBc51T?subid1=jetotak.sk" class="modal_pp-link"
+                            target="_blank" rel="nofollow" title="JetX">
+                            <div class="modal_pp">Oynamak</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+          function selectText(id) {
+            var sel, range;
+            var el = document.getElementById(id);
+            if (window.getSelection && document.createRange) {
+              sel = window.getSelection();
+              if (sel.toString() == '') {
+                window.setTimeout(function () {
+                  range = document.createRange();
+                  range.selectNodeContents(el);
+                  sel.removeAllRanges();
+                  sel.addRange(range);
+                }, 1);
+              }
+            } else if (document.selection) {
+              sel = document.selection.createRange();
+              if (sel.text == '') {
+                range = document.body.createTextRange();
+                range.moveToElementText(el);
+                range.select();
+              }
+            }
+          }
+          modal_promocode_copy_1.onclick = function () {
+            selectText(this.dataset.targetCopyId);
+            this.innerText = 'Promosyon kodu kopyalandı';
+            setTimeout(() => document.execCommand("copy"));
+            setTimeout(() => document.execCommand("copy"), 100);
+            setTimeout(() => this.innerText = 'Promosyon kodunu kopyala', 5000);
+          }
+          
+          $(".wrapper .tab").click(function () {
+            $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+            $(".tab_item").hide().eq($(this).index()).fadeIn()
+          }).eq(0).addClass("active");
+        </script>
+
+</body>
+</html>
