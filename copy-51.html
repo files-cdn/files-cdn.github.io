@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Copier</title>
+<style>
+	::selection { background:#3f51b5; color:#fff; } 
+.btn {
+    display: block;
+    width: 100%;
+    padding: 13px 20px;
+    margin: 5px 0;
+    text-align: center;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+.btn.btn-red {
+    color: #fff;
+    background: linear-gradient(45deg, #f44336 0%, #aa0000 100%);
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 8%);
+    transition: all 200ms linear;
+    text-align: center;
+    border: 1px solid #3c8733;
+}
+.btn.btn-red:hover { transform: scale(1.1); filter: brightness(110%); } 
+.btn {border: none ; } 
+.rating_top {
+ color: #bf130f;
+ font-size: 1.7em;
+ font-weight: 600;
+ text-align: center;
+font-family: 'Roboto Condensed',sans-serif;
+ line-height: 1.7em;
+ border: 5px dashed #b80e0b;
+ background: #cec99c;
+ padding: 2px;
+}
+.rating_top::selection{
+ background: #b80e0b;
+}
+</style>
+</head>
+<body>
+
+<a id="copy" data-target-copy-id="code" class="btn btn-red">КОПИРОВАТЬ ПРОМОКОД</a>
+<div   id="code" class="rating_top" >FAVBONUS</div>
+
+<script>
+			function selectText(id) {
+				var sel, range;
+				var el = document.getElementById(id);
+				if (window.getSelection && document.createRange) {
+					sel = window.getSelection();
+					if (sel.toString() == '') {
+						window.setTimeout(function () {
+							range = document.createRange();
+							range.selectNodeContents(el);
+							sel.removeAllRanges();
+							sel.addRange(range);
+						}, 1);
+					}
+				} else if (document.selection) {
+					sel = document.selection.createRange();
+					if (sel.text == '') {
+						range = document.body.createTextRange();
+						range.moveToElementText(el);
+						range.select();
+					}
+				}
+			}
+			copy.onclick = function () {
+				selectText(this.dataset.targetCopyId);
+				this.innerText = 'ПРОМОКОД СКОПИРОВАН';
+				setTimeout(() => document.execCommand("copy"));
+				setTimeout(() => document.execCommand("copy"), 100);
+				setTimeout(() => this.innerText = 'КОПИРОВАТЬ ПРОМОКОД', 5000);
+			}
+		</script>
+</body>
+</html>
