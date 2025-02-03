@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Magic Apple 2 Slot – Demo</title>
+
+<style>
+html,body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+ .iframe_thumbnail{
+     position:relative;
+}
+
+.amp-iframe-layout {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+ .amp-iframe-layout iframe{
+    height: 100%;
+     width:100%;
+}
+
+
+.prev {
+    background-color: #000
+}
+.prev img {
+    opacity: .6
+}
+
+.prev.no-iframe {
+    background-color: transparent
+}
+
+.prev.no-iframe img {
+    opacity: 1
+}
+
+#playContainer {
+    height: 100%;
+    overflow: hidden;
+    padding-top: 67%;
+    position: relative
+}
+
+.iframe {
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0 0;
+    position: relative;
+    z-index: 9
+}
+
+.iframe .block-to-hide img {
+    bottom: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(7px);
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0
+}
+
+.iframe iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%
+}
+
+.free-slots-no-download.iframe-full-screen {
+    overflow: hidden
+}
+
+.free-slots-no-download.iframe-full-screen .iframe {
+    background: #000;
+    border: none;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999
+}
+
+.free-slots-no-download.iframe-full-screen .iframe button#fullscreen {
+    background-image: url(https://magic-apple.net/images/x1.png);
+    background-position: 0;
+    border-radius: 8px;
+    display: block;
+    height: 34px;
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    width: 34px;
+    z-index: 99999;
+}
+
+.free-slots-no-download.iframe-full-screen .iframe iframe {
+    max-width: 100%;
+    min-height: 100%;
+    position: fixed
+}
+
+button#endfullscreen,button#fullscreen {
+    background-color: #f0f0f0;
+    background-image: url(https://magic-apple.net/images/x.png);
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+    height: 21px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: -10px;
+    text-indent: -9999px;
+    top: -10px;
+    width: 21px;
+    z-index: 999999;
+}
+
+button#fullscreen {
+    display: block
+}
+
+button#endfullscreen,button#fullscreen {
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.iframe_soc {
+    height: 41px;
+    width: 100%
+}
+
+.buttongame {
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: 10px auto;
+    right: 0;
+    top: 0
+}
+
+.buttongame.btn {
+    text-transform: none
+}
+
+.buttongame.btn-orange:hover {
+    opacity: 1
+}
+
+.button-free,.buttongame {
+    font-size: 20px!important;
+    height: 70px;
+    line-height: 70px;
+    /*position: absolute;*/
+    text-align: center;
+    width: 260px;
+    padding: 0;
+}
+
+.prev {
+    background-color: #000
+}
+.prev img {
+    opacity: .6
+}
+
+.prev.no-iframe {
+    background-color: transparent
+}
+
+.prev.no-iframe img {
+    opacity: 1
+}
+
+#playContainer {
+    height: 100%;
+    overflow: hidden;
+    padding-top: 67%;
+    position: relative
+}
+
+.iframe {
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0 0;
+    position: relative;
+    z-index: 9
+}
+
+.iframe .block-to-hide img {
+    bottom: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(7px);
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0
+}
+
+.iframe iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%
+}
+
+.free-slots-no-download.iframe-full-screen {
+    overflow: hidden
+}
+
+.free-slots-no-download.iframe-full-screen .iframe {
+    background: #000;
+    border: none;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999
+}
+
+.free-slots-no-download.iframe-full-screen .iframe button#fullscreen {
+    background-image: url(https://magic-apple.net/images/x1.png);
+    background-position: 0;
+    border-radius: 8px;
+    display: block;
+    height: 34px;
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    width: 34px;
+    z-index: 99999;
+}
+
+.free-slots-no-download.iframe-full-screen .iframe iframe {
+    max-width: 100%;
+    min-height: 100%;
+    position: fixed
+}
+
+button#endfullscreen,button#fullscreen {
+    background-color: #f0f0f0;
+    background-image: url(https://magic-apple.net/images/x.png);
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+    height: 21px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: -10px;
+    text-indent: -9999px;
+    top: -10px;
+    width: 21px;
+    z-index: 999999;
+}
+
+button#fullscreen {
+    display: block
+}
+
+button#endfullscreen,button#fullscreen {
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.iframe_soc {
+    height: 41px;
+    width: 100%
+}
+
+.buttongame {
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: 10px auto;
+    right: 0;
+    top: 0
+}
+
+.buttongame.btn {
+    text-transform: none
+}
+
+.buttongame.btn-orange:hover {
+    opacity: 1
+}
+
+.button-free, .buttongame {
+    font-size: 20px!important;
+    height: 70px;
+    line-height: 70px;
+    /*position: absolute;*/
+    text-align: center;
+    width: 260px;
+    padding: 0;
+}
+.iframe .block-to-hide img {
+    bottom: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(7px);
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.prev img {
+    opacity: .6;
+}
+.demo-btn-wrp {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 0;
+}
+.btn-orange {
+    background-color: #f47b00;
+    background-image: linear-gradient(90deg, #fe9700 0, #f47b00);
+    box-shadow: -2px 2px 5px 0 #e7cea9;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    margin: 10px auto;
+    max-width: 360px;
+    outline: 0;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    bottom: 0;   
+    left: 0;
+    right: 0;
+    font-size: 20px !important;
+    height: 70px;
+    line-height: 70px;
+    width: 260px;
+    padding: 0;
+    text-decoration: none;
+}
+.iframe .block-to-hide .demo-btn-wrp .link-btn {
+    background-color: #16c60c;
+    background-image: linear-gradient(90deg, #1ccb12 0, #12c009);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0 #c4f8c1;
+}
+</style>
+
+</head>
+<body>
+
+<div class="iframe">
+   <div id="playContainer" class="block-to-hide prev" data-url="https://3oaks.com/api/v1/games/magic_apple_2/play?lang=en">
+       <img src="https://magic-apple.net/images/magic-apple-2-demo.webp" alt="Magic Apple 2 Demo" width="1080" height="667" title="Magic Apple 2 Demo" loading="lazy">
+       <div class="demo-btn-wrp">
+       <button class="buttongame btn btn-orange" id="play-span">Demoyu oyna</button>
+       <a class="buttongame btn btn-orange link-btn" target="_blank" rel="nofollow" href="https://trafficmining.net/JKZxpW?subid1=magic-apple.net&subid3=magic-apple-2">Kumarhanede oynamak</a>
+       </div>
+       
+   </div>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var playSpan = document.getElementById("play-span");
+            var playContainer = document.getElementById("playContainer");
+
+            playSpan.addEventListener("click", function () {
+                playContainer.innerHTML = "";
+
+                var iframe = document.createElement("iframe");
+                iframe.id = "iframe";
+                iframe.src = playContainer.getAttribute("data-url");
+                iframe.frameborder = "0";
+                iframe.scrolling = "no";
+                iframe.marginheight = "0";
+                iframe.marginwidth = "0";
+
+                playContainer.appendChild(iframe);
+            });            
+        });
+    </script>
+</body>
+</html>
